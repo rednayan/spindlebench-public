@@ -1,0 +1,6 @@
+dataset,fold,recal,injrecal
+nap,0,0.5,0.5
+nap,1,0.65,0.075
+nap,2,0.125,0.075
+nap,3,0.2,0.075
+nap,4,0.65,0.075

@@ -1,0 +1,16 @@
+[project]
+name = "detector-openspindlenet"
+version = "0.1.0"
+description = "Adapter env for OpenSpindleNet (Sejak et al. 2025), ONNX CPU inference"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "openspindlenet==0.1.1",
+    "onnxruntime>=1.17",
+    "pywavelets>=1.5",
+    "numpy>=1.26,<2.3",
+    "pandas>=2.1",
+    "setuptools<81",  # openspindlenet imports pkg_resources
+]
+
+[tool.uv]
+package = false

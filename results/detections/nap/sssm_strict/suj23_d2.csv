@@ -1,0 +1,8 @@
+onset,duration,channel,event,score
+1602.25,2.0,C3,spindle,0.9541
+1665.75,2.5,C3,spindle,0.9545
+1733.75,0.5,C3,kcomplex,0.744
+1685.75,1.0,Cz,kcomplex,0.7307
+1776.25,2.5,Cz,spindle,0.9592
+1625.75,0.5,F3,kcomplex,0.7603
+1685.75,0.5,F4,kcomplex,0.64

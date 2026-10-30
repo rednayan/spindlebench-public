@@ -1,0 +1,15 @@
+onset,duration,channel,event,score
+42.83,0.15,C3,spindle,0.9119
+55.54,0.13,C3,spindle,0.9122
+75.79,1.28,C3,spindle,0.9982
+144.91,0.44,C3,spindle,0.9858
+330.02,0.88,C3,spindle,0.9948
+622.27,0.11,C3,spindle,0.9295
+1337.69,0.48,C3,spindle,0.989
+1580.24,0.84,C3,spindle,0.9912
+1616.02,0.22,C3,spindle,0.9603
+1639.33,0.69,C3,spindle,0.9944
+1650.87,0.18,C3,spindle,0.9741
+1697.36,0.54,C3,spindle,0.9894
+1782.56,0.14,C3,spindle,0.9567
+1798.32,0.54,C3,spindle,0.9946

@@ -1,0 +1,16 @@
+# Licensing of every file in the repository (REUSE 3.3, https://reuse.software).
+# Code is MIT; documentation, results and released data are CC BY 4.0. Files with their own
+# SPDX header (the two GPL-3.0 detector ports) keep it ("closest" precedence).
+version = 1
+
+[[annotations]]
+path = "**"
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Nayan Sharma"
+SPDX-License-Identifier = "MIT"
+
+[[annotations]]
+path = ["**/*.md", "docs/**", "results/**", "CITATION.cff"]
+precedence = "closest"
+SPDX-FileCopyrightText = "2026 Nayan Sharma"
+SPDX-License-Identifier = "CC-BY-4.0"

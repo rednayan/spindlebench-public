@@ -1,0 +1,11 @@
+onset,duration,channel,event,score
+804.75,1.0,C3,kcomplex,0.7319
+804.75,1.0,Cz,kcomplex,0.6444
+940.75,0.5,Cz,kcomplex,0.6003
+804.75,1.0,F3,kcomplex,0.8422
+940.75,0.5,F3,kcomplex,0.7996
+1166.25,0.5,F3,kcomplex,0.7819
+1221.75,0.5,F3,kcomplex,0.8575
+804.75,1.0,F4,kcomplex,0.6171
+1098.25,0.5,F4,kcomplex,0.7742
+1221.75,0.5,F4,kcomplex,0.7071

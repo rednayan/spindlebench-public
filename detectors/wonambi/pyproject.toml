@@ -1,0 +1,14 @@
+[project]
+name = "detector-wonambi"
+version = "0.1.0"
+description = "Wonambi spindle detectors for the thesis benchmark (separate env: wonambi needs scipy<1.13)"
+requires-python = "==3.12.*"
+dependencies = [
+    "wonambi==7.17",
+    "scipy==1.12.0",
+    "numpy==1.26.4",
+    "pandas==2.2.3",
+]
+
+[tool.uv]
+package = false

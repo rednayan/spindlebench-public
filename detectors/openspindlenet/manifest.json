@@ -1,0 +1,34 @@
+{
+  "name": "openspindlenet",
+  "ids": {
+    "openspindlenet": "OpenSpindleNet scalp model (ONNX), authors' inference package"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "learned",
+  "method": {
+    "citation": "OpenSpindleNet, Comput Biol Med 197 (2025) 110854",
+    "doi": "10.1016/j.compbiomed.2025.110854"
+  },
+  "source": {
+    "url": "https://github.com/CaptainTrojan/openspindlenet",
+    "commit": "ea012307c9b2a10a02099e172a5669e5ef5ec528",
+    "licence": "MIT",
+    "relation": "authors' package openspindlenet==0.1.1, unmodified"
+  },
+  "adapter_licence": "MIT",
+  "weights": {
+    "file": "openspindlenet/models/spindle-detector-eeg.onnx (inside the wheel)",
+    "md5": "f200501cafc2e0cd42b76e5766cdacc2",
+    "licence": "MIT"
+  },
+  "environment": {
+    "type": "uv-project",
+    "python": "3.12",
+    "path": "detectors/openspindlenet",
+    "lock": "detectors/openspindlenet/uv.lock"
+  },
+  "command": "cd detectors/openspindlenet && uv sync && uv run python run.py --datasets dreams_spindles,nap",
+  "notes": "Trained partly on DREAMS: its DREAMS scores are in-sample (registry.IN_SAMPLE)."
+}

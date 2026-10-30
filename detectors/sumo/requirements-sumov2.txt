@@ -1,0 +1,10 @@
+# SUMOv2 (Grieger et al. 2026) environment: Python 3.10, src/sumov2/requirements.txt is unpinned; resolved versions frozen in requirements-sumov2.lock.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
+pytorch-lightning
+numpy
+scipy
+scikit-learn
+pyyaml
+pandas
+matplotlib

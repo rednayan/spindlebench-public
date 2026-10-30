@@ -1,0 +1,59 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Data (licensed / large; fetch with download_nap.py)
+NapEEG/
+
+# Standardised signal/label cache (python export_cache.py)
+cache/
+
+# DREAMS databases (CC BY-NC-ND, no redistribution of modified versions)
+DatabaseSpindles/
+DatabaseKcomplexes/
+
+# per-detector virtual environments and vendored upstream repositories (own git history)
+detectors/*/.venv/
+detectors/sumo/src/
+
+# trained model weights (regenerate with detectors/sumo/finetune/run_all.py)
+results/rq4/work/models/
+
+# logs and scratch
+*.log
+p.html
+
+# SUMO per-sample probabilities (regenerable, large)
+results/rq4/work/prob/
+
+# montage-ablation signal cache (python montage_ablation.py build)
+cache_montage/
+
+# usability_timing.py scratch store
+results/usability/_detections/
+
+# BOAS subset (CC0, python download_boas.py)
+BOAS/
+cache_inj/
+results/injection/work/prep/
+results/injection/work/models/
+results/injection/work/prob/
+third_party/
+MASS_data/
+papers/
+results/injection/bench/*/masks/
+HMC/
+SLEEPEDF/
+_snapshot/
+
+# private companion repository (its own git repo) and local Claude Code skills
+notes/
+.claude/
+skills-lock.json

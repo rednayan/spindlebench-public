@@ -1,0 +1,24 @@
+# uv run pre-commit install   (once; then the hooks run on every commit)
+exclude: ^notes/
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-added-large-files  # results/ included on purpose
+        args: [--maxkb=8000]
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: check-json
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: ^results/
+      - id: trailing-whitespace
+        exclude: ^results/
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (project version from uv.lock)
+        entry: uv run --no-sync ruff check
+        language: system
+        types: [python]

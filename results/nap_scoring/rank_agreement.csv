@@ -1,0 +1,6 @@
+vs,metric,n,tau,p
+F1_tau0.5,F1_tau1.0,23,0.8498,0.0
+F1_tau0.5,F1_integrated,23,0.8893,0.0
+F1_tau0.5,aff_F1,23,0.6838,0.0
+F1_tau0.5,F1_contain,23,0.6601,0.0
+F1_integrated,aff_F1,23,0.7787,0.0

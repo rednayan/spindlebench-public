@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use spindlebench, please cite it as below, and cite the datasets and detectors you use (DATA_SOURCES.md, detectors/*/manifest.json)."
+title: "spindlebench: a benchmark for sleep spindle and K-complex detectors"
+type: software
+authors:
+  - family-names: Sharma
+    given-names: Nayan
+    affiliation: "Technical University of Applied Sciences Würzburg-Schweinfurt (THWS)"
+version: 0.1.0.dev0
+license: MIT
+keywords:
+  - sleep EEG
+  - sleep spindles
+  - K-complexes
+  - event detection
+  - benchmark
+  - evaluation
+preferred-citation:
+  type: thesis
+  title: "Automatic Detection of Sleep Graphoelements: Benchmarking on Public Datasets and Transfer to in-house Custom Dataset"
+  authors:
+    - family-names: Sharma
+      given-names: Nayan
+  thesis-type: "Master's thesis"
+  institution:
+    name: "Technical University of Applied Sciences Würzburg-Schweinfurt (THWS)"
+  year: 2027

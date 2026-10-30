@@ -1,0 +1,32 @@
+{
+  "name": "a7",
+  "ids": {
+    "a7": "A7, published thresholds, stage-free 30 s baseline",
+    "a7_incontext": "A7 with the published in-context classifier",
+    "a7_n2base": "A7 with the baseline restricted to expert N2 (reproduction run; uses expert staging)",
+    "a7_incontext_n2base": "a7_incontext with an expert-N2 baseline (reproduction run; uses expert staging)"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "rule-based",
+  "method": {
+    "citation": "Lacourse et al. 2019, J Neurosci Methods 316:3-11",
+    "doi": "10.1016/j.jneumeth.2018.08.014"
+  },
+  "source": {
+    "url": "https://github.com/swarby/A7_LacourseSpindleDetector",
+    "commit": "e67b6372c96b4d242ba96c18eb6b68d3266bf605",
+    "licence": "GPL-3.0",
+    "relation": "a7.py is a line-by-line Python port of the official MATLAB code"
+  },
+  "adapter_licence": "GPL-3.0-or-later",
+  "weights": null,
+  "environment": {
+    "type": "main",
+    "python": "3.14",
+    "path": ".",
+    "lock": "uv.lock"
+  },
+  "command": "uv run python detectors/a7/run.py --datasets dreams_spindles,nap [--channels C3,F3,F4,C4,O1,O2,Cz]"
+}

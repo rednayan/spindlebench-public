@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-10-28T15:44:32+00:00",
+  "command": [
+    "<root>/.venv/Scripts/python.exe",
+    "experiments/raters/interrater.py"
+  ],
+  "spindlebench": "0.1.0.dev0",
+  "git": {
+    "commit": "79ab311cfcc9d85995f106d49631335e08bbdecb",
+    "branch": "restructure",
+    "dirty": true
+  },
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.0",
+    "matplotlib": "3.11.2",
+    "affiliation": "1.0"
+  },
+  "uv_lock_sha256": "b694839e465b1abdcc88545ed647a9999bf57287daeacddcf5063a8cf11d210a",
+  "protocols": [
+    "benchmark.v1"
+  ],
+  "config": {
+    "args": []
+  },
+  "seconds": 0.2
+}

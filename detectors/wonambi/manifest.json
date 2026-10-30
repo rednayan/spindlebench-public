@@ -1,0 +1,39 @@
+{
+  "name": "wonambi",
+  "ids": {
+    "wonambi_ferrarelli2007": "wonambi DetectSpindle method Ferrarelli2007, defaults",
+    "wonambi_moelle2011": "wonambi DetectSpindle method Moelle2011, defaults",
+    "wonambi_nir2011": "wonambi DetectSpindle method Nir2011, defaults",
+    "wonambi_wamsley2012": "wonambi DetectSpindle method Wamsley2012, defaults",
+    "wonambi_martin2013": "wonambi DetectSpindle method Martin2013, defaults",
+    "wonambi_ray2015": "wonambi DetectSpindle method Ray2015, defaults",
+    "wonambi_lacourse2018": "wonambi DetectSpindle method Lacourse2018, defaults",
+    "wonambi_fasst": "wonambi DetectSpindle method FASST, defaults",
+    "wonambi_fasst2": "wonambi DetectSpindle method FASST2, defaults",
+    "wonambi_ucsd": "wonambi DetectSpindle method UCSD, defaults",
+    "wonambi_concordia": "wonambi DetectSpindle method Concordia, defaults"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "rule-based",
+  "method": {
+    "citation": "wonambi.detect.DetectSpindle; method papers per id in the README",
+    "doi": null
+  },
+  "source": {
+    "url": "https://github.com/wonambi-python/wonambi",
+    "commit": "PyPI 7.17",
+    "licence": "GPL-3.0 on PyPI; BSD-3 in the repository LICENSE",
+    "relation": "library called unmodified"
+  },
+  "adapter_licence": "MIT",
+  "weights": null,
+  "environment": {
+    "type": "uv-project",
+    "python": "3.12",
+    "path": "detectors/wonambi",
+    "lock": "detectors/wonambi/uv.lock"
+  },
+  "command": "detectors/wonambi/.venv/Scripts/python detectors/wonambi/run.py [--datasets dreams_spindles,nap]"
+}

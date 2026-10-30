@@ -1,0 +1,66 @@
+
+=== dreams_spindles: main protocol (onset ±0.5, vs expert1) ===
+  event               detector scope  n_rec  n_ref  n_det  P_pooled  R_pooled  F1_pooled  F1_mean  F1_sd
+spindle         sumo_ft_all_s2    N2      8    299    288     0.774     0.746      0.760    0.698  0.150
+spindle     sumo_ft_all_s2_t05    N2      8    299    288     0.774     0.746      0.760    0.698  0.150
+spindle        sumo_ft_all_t05    N2      8    299    281     0.772     0.726      0.748    0.692  0.134
+spindle            sumo_ft_all    N2      8    299    283     0.767     0.726      0.746    0.690  0.133
+spindle         sumo_ft_all_s1    N2      8    299    301     0.741     0.746      0.743    0.685  0.148
+spindle     sumo_ft_all_s1_t05    N2      8    299    339     0.699     0.793      0.743    0.678  0.161
+spindle sumo_ft_all_lr5e-3_t05    N2      8    299    308     0.701     0.722      0.712    0.650  0.147
+spindle       sumo_scratch_t05    N2      8    299    371     0.606     0.753      0.672    0.611  0.169
+spindle           sumo_scratch    N2      8    299    311     0.653     0.679      0.666    0.608  0.144
+spindle        sumo_scratch_s2    N2      8    299    261     0.705     0.615      0.657    0.611  0.110
+spindle     sumo_ft_all_lr5e-3    N2      8    299    200     0.795     0.532      0.637    0.601  0.105
+spindle    sumo_scratch_s1_t05    N2      8    299    381     0.554     0.706      0.621    0.562  0.166
+spindle             sumo_recal    N2      8    299    162     0.883     0.478      0.620    0.615  0.091
+spindle          sumo_zeroshot    N2      8    299    162     0.883     0.478      0.620    0.615  0.091
+spindle        sumo_scratch_s1    N2      8    299    241     0.685     0.552      0.611    0.589  0.067
+spindle    sumo_scratch_s2_t05    N2      8    299    397     0.529     0.702      0.603    0.547  0.167
+spindle         sumo_ft_all_s2   all      8    355    355     0.687     0.687      0.687    0.645  0.193
+spindle     sumo_ft_all_s2_t05   all      8    355    355     0.687     0.687      0.687    0.645  0.193
+spindle        sumo_ft_all_t05   all      8    355    334     0.704     0.662      0.682    0.629  0.196
+spindle     sumo_ft_all_s1_t05   all      8    355    420     0.626     0.741      0.679    0.624  0.186
+spindle            sumo_ft_all   all      8    355    338     0.695     0.662      0.678    0.624  0.194
+spindle         sumo_ft_all_s1   all      8    355    368     0.663     0.687      0.675    0.624  0.188
+spindle sumo_ft_all_lr5e-3_t05   all      8    355    380     0.621     0.665      0.642    0.601  0.186
+spindle           sumo_scratch   all      8    355    372     0.597     0.625      0.611    0.568  0.172
+spindle       sumo_scratch_t05   all      8    355    453     0.541     0.690      0.606    0.562  0.195
+spindle        sumo_scratch_s2   all      8    355    302     0.642     0.546      0.591    0.556  0.163
+spindle     sumo_ft_all_lr5e-3   all      8    355    227     0.731     0.468      0.570    0.549  0.158
+spindle    sumo_scratch_s1_t05   all      8    355    463     0.497     0.648      0.562    0.518  0.179
+spindle             sumo_recal   all      8    355    183     0.825     0.425      0.561    0.557  0.171
+spindle          sumo_zeroshot   all      8    355    183     0.825     0.425      0.561    0.557  0.171
+spindle    sumo_scratch_s2_t05   all      8    355    481     0.478     0.648      0.550    0.507  0.178
+spindle        sumo_scratch_s1   all      8    355    283     0.611     0.487      0.542    0.523  0.134
+
+=== nap: main protocol (center ±0.5, vs expert) ===
+  event           detector scope  n_rec  n_ref  n_det  P_pooled  R_pooled  F1_pooled  F1_mean  F1_sd
+spindle       sumo_scratch    N2     30   1749   2206     0.351     0.443      0.392    0.380  0.167
+spindle    sumo_scratch_s1    N2     30   1749   2470     0.311     0.439      0.364    0.368  0.155
+spindle sumo_ft_all_lr5e-3    N2     30   1749   2305     0.311     0.411      0.354    0.365  0.163
+spindle    sumo_scratch_s2    N2     30   1749   2679     0.286     0.438      0.346    0.366  0.173
+spindle     sumo_ft_all_s1    N2     30   1749   2119     0.311     0.376      0.340    0.318  0.174
+spindle     sumo_ft_all_s2    N2     30   1749   2062     0.311     0.366      0.336    0.319  0.180
+spindle         sumo_ft_n6    N2     30   1749   1964     0.316     0.355      0.335    0.305  0.189
+spindle         sumo_ft_n3    N2     30   1749   2246     0.289     0.370      0.324    0.298  0.179
+spindle        sumo_ft_all    N2     30   1749   1950     0.304     0.338      0.320    0.296  0.185
+spindle      sumo_zeroshot    N2     30   1749   1074     0.373     0.229      0.284    0.246  0.190
+spindle       sumo_persubj    N2     30   1749   1076     0.373     0.229      0.284    0.246  0.190
+spindle         sumo_recal    N2     30   1749   1078     0.372     0.229      0.284    0.246  0.190
+spindle         sumo_ft_n1    N2     30   1749   2329     0.241     0.321      0.276    0.255  0.169
+spindle       sumo_scratch   all     30   2181   3623     0.267     0.444      0.334    0.315  0.141
+spindle     sumo_ft_all_s1   all     30   2181   3504     0.241     0.387      0.297    0.267  0.151
+spindle sumo_ft_all_lr5e-3   all     30   2181   3983     0.228     0.416      0.294    0.292  0.137
+spindle    sumo_scratch_s1   all     30   2181   4242     0.221     0.430      0.292    0.286  0.131
+spindle     sumo_ft_all_s2   all     30   2181   3372     0.239     0.370      0.290    0.267  0.153
+spindle        sumo_ft_all   all     30   2181   3214     0.236     0.348      0.282    0.248  0.156
+spindle         sumo_ft_n6   all     30   2181   3316     0.233     0.354      0.281    0.251  0.162
+spindle    sumo_scratch_s2   all     30   2181   4530     0.208     0.431      0.280    0.291  0.151
+spindle         sumo_ft_n3   all     30   2181   3788     0.213     0.370      0.270    0.238  0.144
+spindle      sumo_zeroshot   all     30   2181   1713     0.292     0.229      0.257    0.216  0.172
+spindle       sumo_persubj   all     30   2181   1715     0.292     0.229      0.257    0.216  0.172
+spindle         sumo_recal   all     30   2181   1717     0.291     0.229      0.257    0.215  0.172
+spindle         sumo_ft_n1   all     30   2181   4072     0.180     0.336      0.234    0.209  0.136
+
+wrote results\rq4\benchmark/

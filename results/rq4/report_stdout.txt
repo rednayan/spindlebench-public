@@ -1,0 +1,84 @@
+NAP (centre +-0.5 s vs expert, 30 included naps, pooled):
+                id  n_rec_N2  P_N2  R_N2  F1_N2 better_naps_N2  n_rec_all  P_all  R_all  F1_all        dF1_N2_CI       dF1_all_CI
+     sumo_zeroshot        30 0.373 0.229  0.284           0/29         30  0.292  0.229   0.257              NaN              NaN
+        sumo_recal        30 0.372 0.229  0.284           0/29         30  0.291  0.229   0.257 [-0.001, -0.000] [-0.001, -0.000]
+      sumo_persubj        30 0.373 0.229  0.284           0/29         30  0.292  0.229   0.257 [-0.001, +0.000] [-0.000, +0.000]
+        sumo_ft_n1        30 0.241 0.321  0.276          17/29         30  0.180  0.336   0.234 [-0.064, +0.046] [-0.071, +0.028]
+        sumo_ft_n3        30 0.289 0.370  0.324          14/29         30  0.213  0.370   0.270 [-0.007, +0.097] [-0.028, +0.062]
+        sumo_ft_n6        30 0.316 0.355  0.335          21/29         30  0.233  0.354   0.281 [+0.017, +0.087] [-0.002, +0.057]
+       sumo_ft_all        30 0.304 0.338  0.320          21/29         30  0.236  0.348   0.282 [-0.021, +0.089] [-0.020, +0.066]
+    sumo_ft_all_s1        30 0.311 0.376  0.340          21/29         30  0.241  0.387   0.297 [+0.004, +0.108] [+0.001, +0.088]
+    sumo_ft_all_s2        30 0.311 0.366  0.336          22/29         30  0.239  0.370   0.290 [+0.017, +0.094] [+0.001, +0.069]
+sumo_ft_all_lr5e-3        30 0.311 0.411  0.354          23/29         30  0.228  0.416   0.294 [+0.019, +0.132] [-0.007, +0.090]
+      sumo_scratch        30 0.351 0.443  0.392          24/29         30  0.267  0.444   0.334 [+0.032, +0.189] [+0.014, +0.146]
+   sumo_scratch_s1        30 0.311 0.439  0.364          25/29         30  0.221  0.430   0.292 [+0.014, +0.154] [-0.025, +0.104]
+   sumo_scratch_s2        30 0.286 0.438  0.346          25/29         30  0.208  0.431   0.280 [+0.000, +0.131] [-0.036, +0.089]
+seed spread sumo_ft_all: N2 0.320-0.340 (mean 0.332, sd 0.011); all 0.282-0.297 (mean 0.290)
+seed spread sumo_scratch: N2 0.346-0.392 (mean 0.367, sd 0.023); all 0.280-0.334 (mean 0.302)
+
+DREAMS (vs expert 1, window 0-1000 s, pooled over 8 excerpts):
+                    id   rule scope  n_det     P     R    F1
+           sumo_ft_all  onset   all    338 0.695 0.662 0.678
+    sumo_ft_all_lr5e-3  onset   all    227 0.731 0.468 0.570
+sumo_ft_all_lr5e-3_t05  onset   all    380 0.621 0.665 0.642
+        sumo_ft_all_s1  onset   all    368 0.663 0.687 0.675
+    sumo_ft_all_s1_t05  onset   all    420 0.626 0.741 0.679
+        sumo_ft_all_s2  onset   all    355 0.687 0.687 0.687
+    sumo_ft_all_s2_t05  onset   all    355 0.687 0.687 0.687
+       sumo_ft_all_t05  onset   all    334 0.704 0.662 0.682
+            sumo_recal  onset   all    183 0.825 0.425 0.561
+          sumo_scratch  onset   all    372 0.597 0.625 0.611
+       sumo_scratch_s1  onset   all    283 0.611 0.487 0.542
+   sumo_scratch_s1_t05  onset   all    463 0.497 0.648 0.562
+       sumo_scratch_s2  onset   all    302 0.642 0.546 0.591
+   sumo_scratch_s2_t05  onset   all    481 0.478 0.648 0.550
+      sumo_scratch_t05  onset   all    453 0.541 0.690 0.606
+         sumo_zeroshot  onset   all    183 0.825 0.425 0.561
+           sumo_ft_all  onset    N2    283 0.767 0.726 0.746
+    sumo_ft_all_lr5e-3  onset    N2    200 0.795 0.532 0.637
+sumo_ft_all_lr5e-3_t05  onset    N2    308 0.701 0.722 0.712
+        sumo_ft_all_s1  onset    N2    301 0.741 0.746 0.743
+    sumo_ft_all_s1_t05  onset    N2    339 0.699 0.793 0.743
+        sumo_ft_all_s2  onset    N2    288 0.774 0.746 0.760
+    sumo_ft_all_s2_t05  onset    N2    288 0.774 0.746 0.760
+       sumo_ft_all_t05  onset    N2    281 0.772 0.726 0.748
+            sumo_recal  onset    N2    162 0.883 0.478 0.620
+          sumo_scratch  onset    N2    311 0.653 0.679 0.666
+       sumo_scratch_s1  onset    N2    241 0.685 0.552 0.611
+   sumo_scratch_s1_t05  onset    N2    381 0.554 0.706 0.621
+       sumo_scratch_s2  onset    N2    261 0.705 0.615 0.657
+   sumo_scratch_s2_t05  onset    N2    397 0.529 0.702 0.603
+      sumo_scratch_t05  onset    N2    371 0.606 0.753 0.672
+         sumo_zeroshot  onset    N2    162 0.883 0.478 0.620
+           sumo_ft_all center   all    338 0.716 0.682 0.698
+    sumo_ft_all_lr5e-3 center   all    227 0.753 0.482 0.588
+sumo_ft_all_lr5e-3_t05 center   all    380 0.645 0.690 0.667
+        sumo_ft_all_s1 center   all    368 0.674 0.699 0.686
+    sumo_ft_all_s1_t05 center   all    420 0.636 0.752 0.689
+        sumo_ft_all_s2 center   all    355 0.701 0.701 0.701
+    sumo_ft_all_s2_t05 center   all    355 0.701 0.701 0.701
+       sumo_ft_all_t05 center   all    334 0.725 0.682 0.702
+            sumo_recal center   all    183 0.852 0.439 0.580
+          sumo_scratch center   all    372 0.618 0.648 0.633
+       sumo_scratch_s1 center   all    283 0.611 0.487 0.542
+   sumo_scratch_s1_t05 center   all    463 0.521 0.679 0.589
+       sumo_scratch_s2 center   all    302 0.652 0.555 0.600
+   sumo_scratch_s2_t05 center   all    481 0.501 0.679 0.577
+      sumo_scratch_t05 center   all    453 0.563 0.718 0.631
+         sumo_zeroshot center   all    183 0.852 0.439 0.580
+           sumo_ft_all center    N2    283 0.781 0.739 0.759
+    sumo_ft_all_lr5e-3 center    N2    200 0.805 0.538 0.645
+sumo_ft_all_lr5e-3_t05 center    N2    308 0.714 0.736 0.725
+        sumo_ft_all_s1 center    N2    301 0.751 0.756 0.753
+    sumo_ft_all_s1_t05 center    N2    339 0.711 0.806 0.755
+        sumo_ft_all_s2 center    N2    288 0.778 0.749 0.763
+    sumo_ft_all_s2_t05 center    N2    288 0.778 0.749 0.763
+       sumo_ft_all_t05 center    N2    281 0.786 0.739 0.762
+            sumo_recal center    N2    162 0.901 0.488 0.633
+          sumo_scratch center    N2    311 0.672 0.699 0.685
+       sumo_scratch_s1 center    N2    241 0.685 0.552 0.611
+   sumo_scratch_s1_t05 center    N2    381 0.570 0.726 0.638
+       sumo_scratch_s2 center    N2    261 0.713 0.622 0.664
+   sumo_scratch_s2_t05 center    N2    397 0.552 0.732 0.629
+      sumo_scratch_t05 center    N2    371 0.623 0.773 0.690
+         sumo_zeroshot center    N2    162 0.901 0.488 0.633

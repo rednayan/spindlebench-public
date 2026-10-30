@@ -1,0 +1,23 @@
+dataset,contrast,diff,lo,hi,excludes_0,units
+nap,C injection - A0 zero-shot,0.0304,0.0015,0.0649,True,17
+nap,C injection - B self-training,0.0311,0.0048,0.063,True,17
+nap,C injection - D real labels,0.0094,-0.0084,0.0283,False,17
+nap,D real labels - A0 zero-shot,0.0211,-0.0052,0.0508,False,17
+nap,B self-training - A0 zero-shot,-0.0006,-0.0076,0.007,False,17
+nap,"C' injection, real-label selection - A0 zero-shot",0.0207,-0.0022,0.0447,False,17
+nap,A1' recal (injected) - A0 zero-shot,-0.0014,-0.0025,-0.0003,True,17
+nap,fraction of A0->D gap closed by C,1.4452,-2.9999,5.6971,False,17
+dreams_spindles,C injection - A0 zero-shot,-0.0105,-0.1265,0.0831,False,8
+dreams_spindles,C injection - D real labels,-0.04,-0.1064,0.018,False,8
+dreams_spindles,D real labels - A0 zero-shot,0.0295,-0.0228,0.0654,False,8
+dreams_spindles,"C' injection, real-label selection - A0 zero-shot",0.0303,-0.0525,0.1059,False,8
+dreams_spindles,A1' recal (injected) - A0 zero-shot,0.0,0.0,0.0,False,8
+dreams_spindles,fraction of A0->D gap closed by C,-0.3551,-23.7414,23.3011,False,8
+dreams_spindles_x,C injection - A0 zero-shot,0.037,-0.0723,0.1249,False,8
+dreams_spindles_x,C injection - B self-training,0.0114,-0.0791,0.0852,False,8
+dreams_spindles_x,C injection - D real labels,-0.003,-0.0332,0.0178,False,8
+dreams_spindles_x,D real labels - A0 zero-shot,0.0401,-0.0425,0.1129,False,8
+dreams_spindles_x,B self-training - A0 zero-shot,0.0256,0.0033,0.0409,True,8
+dreams_spindles_x,"C' injection, real-label selection - A0 zero-shot",0.032,-0.0792,0.1222,False,8
+dreams_spindles_x,A1' recal (injected) - A0 zero-shot,0.0,0.0,0.0,False,8
+dreams_spindles_x,fraction of A0->D gap closed by C,0.924,-3.0408,3.5736,False,8

@@ -1,0 +1,29 @@
+rule,arm,F1,P,R
+0.5,A0 zero-shot,0.3052,0.3673,0.2611
+0.5,A1 recal (real),0.3031,0.3644,0.2594
+0.5,A1' recal (injected),0.3039,0.3645,0.2605
+0.5,B self-training,0.3046,0.335,0.2792
+0.5,C injection,0.3356,0.2881,0.4024
+0.5,"C' injection, real-label selection",0.3259,0.2881,0.3754
+0.5,D real labels,0.3263,0.2919,0.3698
+1.0,A0 zero-shot,0.4201,0.5055,0.3593
+1.0,A1 recal (real),0.4192,0.5039,0.3588
+1.0,A1' recal (injected),0.4204,0.5043,0.3605
+1.0,B self-training,0.4242,0.4666,0.3889
+1.0,C injection,0.4651,0.3992,0.5576
+1.0,"C' injection, real-label selection",0.4548,0.402,0.5239
+1.0,D real labels,0.4692,0.4198,0.5319
+1.5,A0 zero-shot,0.4529,0.545,0.3874
+1.5,A1 recal (real),0.4526,0.5442,0.3874
+1.5,A1' recal (injected),0.4532,0.5436,0.3885
+1.5,B self-training,0.4591,0.505,0.4209
+1.5,C injection,0.5008,0.4298,0.6004
+1.5,"C' injection, real-label selection",0.494,0.4367,0.569
+1.5,D real labels,0.5067,0.4534,0.5744
+contain,A0 zero-shot,0.3695,0.4447,0.3161
+contain,A1 recal (real),0.3686,0.4432,0.3156
+contain,A1' recal (injected),0.3687,0.4423,0.3161
+contain,B self-training,0.3771,0.4147,0.3457
+contain,C injection,0.4162,0.3573,0.499
+contain,"C' injection, real-label selection",0.408,0.3606,0.47
+contain,D real labels,0.4298,0.3845,0.4872

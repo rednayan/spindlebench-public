@@ -1,0 +1,30 @@
+{
+  "name": "kcomplex_rules",
+  "ids": {
+    "spinky_kc": "Spinky K-complex detector (Lajnef et al. 2017), Python port",
+    "yasa_sw_kc": "YASA slow-wave detector used as a K-complex detector"
+  },
+  "events": [
+    "kcomplex"
+  ],
+  "kind": "rule-based",
+  "method": {
+    "citation": "Lajnef et al. 2017, Front Neuroinform 11:15; Vallat and Walker 2021, eLife",
+    "doi": "10.3389/fninf.2017.00015"
+  },
+  "source": {
+    "url": "https://github.com/TarekLaj/SPINKY",
+    "commit": "a2cb3293",
+    "licence": "GPL-3.0",
+    "relation": "spinky.py ports the Spinky K-complex detector (checked by check_spinky.py)"
+  },
+  "adapter_licence": "GPL-3.0-or-later",
+  "weights": null,
+  "environment": {
+    "type": "main",
+    "python": "3.14",
+    "path": ".",
+    "lock": "uv.lock"
+  },
+  "command": "uv run python detectors/kcomplex_rules/run.py [--datasets dreams_kc,nap] [--detectors spinky_kc,yasa_sw_kc]"
+}

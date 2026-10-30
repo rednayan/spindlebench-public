@@ -1,0 +1,30 @@
+{
+  "name": "moelle",
+  "ids": {
+    "moelle2011_faithful": "Moelle et al. 2011 written from the paper; SD over the whole recording (stage-free)",
+    "moelle2011_faithful_nrem": "as above, SD over expert N2+N3 as in the paper (reproduction run; uses expert staging)"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "rule-based",
+  "method": {
+    "citation": "Moelle et al. 2011, Sleep 34(10):1411-1421",
+    "doi": "10.5665/SLEEP.1290"
+  },
+  "source": {
+    "url": null,
+    "commit": null,
+    "licence": null,
+    "relation": "written from the paper; no upstream code"
+  },
+  "adapter_licence": "MIT",
+  "weights": null,
+  "environment": {
+    "type": "main",
+    "python": "3.14",
+    "path": ".",
+    "lock": "uv.lock"
+  },
+  "command": "uv run python detectors/moelle/run.py [--datasets dreams_spindles,nap] [--channels C3,...]"
+}

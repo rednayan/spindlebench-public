@@ -1,0 +1,35 @@
+{
+  "name": "sumo",
+  "ids": {
+    "sumo": "SUMO, authors' weights",
+    "sumov2": "SUMOv2, authors' weights, seg_type recording (stage-free)",
+    "sumov2_n2": "SUMOv2, seg_type block on expert N2 (reproduction run; uses expert staging)"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "learned",
+  "method": {
+    "citation": "Kaulen et al. 2022, PLoS ONE 17(4):e0266148; SUMOv2 (dslaborg)",
+    "doi": "10.1371/journal.pone.0266148"
+  },
+  "source": {
+    "url": "https://github.com/dslaborg/sumo ; https://github.com/dslaborg/sumov2",
+    "commit": "1f1a61c1f576245cb82be39e7548fba4fda79db5 ; 032a185b8d87225c49ac8dbb1d1501ad5efb3c2d",
+    "licence": "MIT",
+    "relation": "authors' repositories cloned into detectors/sumo/src, unmodified"
+  },
+  "adapter_licence": "MIT",
+  "weights": {
+    "file": "src/sumo/output/final.ckpt ; src/sumov2/output/final.ckpt (upstream repositories)",
+    "licence": "MIT"
+  },
+  "environment": {
+    "type": "venv-requirements",
+    "python": "3.9 (SUMO) ; 3.10 (SUMOv2)",
+    "path": "detectors/sumo",
+    "lock": "detectors/sumo/requirements-sumo.lock.txt ; detectors/sumo/requirements-sumov2.lock.txt"
+  },
+  "command": "see detectors/sumo/README.md (clone, two venvs), then run.py --model sumo,sumov2,sumov2_n2",
+  "notes": "Fine-tuned and injection-trained variants are written by experiments, not by this adapter."
+}

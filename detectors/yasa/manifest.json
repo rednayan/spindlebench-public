@@ -1,0 +1,31 @@
+{
+  "name": "yasa",
+  "ids": {
+    "yasa_default": "YASA spindles_detect, published thresholds 0.20 / 0.65 / 1.5",
+    "yasa_loose": "YASA thresholds 0.15 / 0.55 / 1.0 (Update 1)",
+    "yasa_dreams_tuned": "YASA thresholds tuned on DREAMS (leave-one-excerpt-out on DREAMS; all 8 for NAP)"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "rule-based",
+  "method": {
+    "citation": "Vallat and Walker 2021, eLife 10:e70092",
+    "doi": "10.7554/eLife.70092"
+  },
+  "source": {
+    "url": "https://github.com/raphaelvallat/yasa",
+    "commit": "PyPI 0.8.0",
+    "licence": "BSD-3-Clause",
+    "relation": "library called unmodified"
+  },
+  "adapter_licence": "MIT",
+  "weights": null,
+  "environment": {
+    "type": "main",
+    "python": "3.14",
+    "path": ".",
+    "lock": "uv.lock"
+  },
+  "command": "uv run python detectors/yasa/run.py [--datasets dreams_spindles,nap] [--channels C3,...]"
+}

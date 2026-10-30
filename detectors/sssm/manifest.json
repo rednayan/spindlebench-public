@@ -1,0 +1,36 @@
+{
+  "name": "sssm",
+  "ids": {
+    "sssm": "SSSM model.pt, package default thresholds",
+    "sssm_strict": "SSSM model.pt, wrap_sssm defaults (spindle 0.95, K-complex 0.6)",
+    "sssm_v2": "SSSM model_V2.pt"
+  },
+  "events": [
+    "spindle",
+    "kcomplex"
+  ],
+  "kind": "learned",
+  "method": {
+    "citation": "Bao et al. 2025, medRxiv preprint",
+    "doi": "10.1101/2025.09.25.25336636"
+  },
+  "source": {
+    "url": "https://github.com/didi226/Sleep-Semantic-Segmentation",
+    "commit": "305efb04e2d8f5e986f7f52824c06718cac53ed6",
+    "licence": null,
+    "relation": "authors' package sssm 0.0.6, unmodified"
+  },
+  "adapter_licence": "MIT",
+  "weights": {
+    "file": "sssm/saved_models/model.pt and model_V2.pt (inside the package)",
+    "licence": null,
+    "note": "no licence declared: benchmarking only, do not redistribute"
+  },
+  "environment": {
+    "type": "uv-project",
+    "python": "3.12",
+    "path": "detectors/sssm",
+    "lock": "detectors/sssm/uv.lock"
+  },
+  "command": "cd detectors/sssm && uv sync && uv run python run.py --datasets dreams_spindles,dreams_kc,nap"
+}

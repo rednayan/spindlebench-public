@@ -1,0 +1,8 @@
+# store text with LF line endings on every platform
+* text=auto eol=lf
+*.bat text eol=crlf
+*.png binary
+*.pdf binary
+*.npz binary
+*.npy binary
+*.pptx binary

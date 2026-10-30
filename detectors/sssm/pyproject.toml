@@ -1,0 +1,28 @@
+[project]
+name = "detector-sssm"
+version = "0.1.0"
+description = "Adapter env for SSSM (Bao et al. 2025), CPU PyTorch inference"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+    "sssm==0.1.0",
+    "torch>=2.2",
+    "numpy>=1.26,<2.3",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "mne>=1.6",
+    "einops",
+    "scikit-learn",
+    "seaborn",
+    "matplotlib",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
