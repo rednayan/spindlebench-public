@@ -1,6 +1,6 @@
 [project]
 name = "spindlebench"
-version = "0.1.0.dev0"
+version = "0.1.0"
 description = "Benchmark for sleep spindle and K-complex detectors under different references and protocols"
 readme = "README.md"
 license = "MIT"

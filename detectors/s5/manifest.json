@@ -1,0 +1,34 @@
+{
+  "name": "s5",
+  "ids": {
+    "s5": "S5 (S3Net), fold-1 MODA checkpoint, authors' inference recipe, stage-free",
+    "s5_ens": "S5, mean softmax of the five MODA fold checkpoints, same post-processing"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "learned",
+  "method": {
+    "citation": "S5: Self-Supervised Learning Boosts Sleep Spindle Detection in Single-Channel EEG via Temporal Segmentation, IEEE TBME 2026",
+    "doi": "10.1109/TBME.2026.3675979"
+  },
+  "source": {
+    "url": "https://github.com/Adrenaline613/S5",
+    "commit": "e31fb2ef00bca688249c11ce06dedd3c570ed12c",
+    "licence": "GPL-3.0",
+    "relation": "authors' repository cloned into detectors/s5/src, unmodified; run.py imports its model and post-processing"
+  },
+  "adapter_licence": "GPL-3.0-or-later",
+  "weights": {
+    "file": "src/weight/MODA_S3Net_fullyfinetune_20250715/fold{1..5}_best.ckpt (upstream repository)",
+    "licence": "GPL-3.0"
+  },
+  "environment": {
+    "type": "uv-project",
+    "python": "3.9",
+    "path": "detectors/s5",
+    "lock": "detectors/s5/uv.lock"
+  },
+  "command": "git clone https://github.com/Adrenaline613/S5 detectors/s5/src && git -C detectors/s5/src checkout e31fb2e && cd detectors/s5 && uv sync && cd ../.. && detectors/s5/.venv/Scripts/python detectors/s5/run.py [--datasets dreams_spindles,nap] [--channels C3,...]",
+  "notes": "Trained on MODA (MASS SS1/SS3 segments); DREAMS and NAP are not mentioned in the repository, so both scores are treated as out-of-sample. The paper full text was not accessible (2026-10-30)."
+}

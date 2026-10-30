@@ -1,12 +1,12 @@
 {
-  "created_utc": "2026-10-28T16:19:58+00:00",
+  "created_utc": "2026-10-30T10:10:46+00:00",
   "command": [
     "<root>/.venv/Scripts/python.exe",
     "scripts/make_tables.py"
   ],
   "spindlebench": "0.1.0.dev0",
   "git": {
-    "commit": "64974226b00e1c54e4e191a819cb54cc0ae04d41",
+    "commit": "90a60df8a1deaaf71488a3fbc315235455a35449",
     "branch": "audit-baseline",
     "dirty": true
   },

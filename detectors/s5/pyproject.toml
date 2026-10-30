@@ -1,0 +1,22 @@
+[project]
+name = "detector-s5"
+version = "0.1.0"
+description = "S5 spindle detector (authors' repository, MODA weights) for the thesis benchmark"
+requires-python = "==3.9.*"
+dependencies = [
+    "torch==2.3.1",
+    "numpy<2",
+    "pandas",
+    "scipy",
+]
+
+[tool.uv]
+package = false
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }

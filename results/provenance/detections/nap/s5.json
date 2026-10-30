@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-10-30T10:05:41+00:00",
+  "command": [
+    "<root>/detectors/s5/.venv/Scripts/python.exe",
+    "detectors/s5/run.py",
+    "--datasets",
+    "dreams_spindles,nap",
+    "--channels",
+    "C3,F3,F4,C4,O1,O2,Cz"
+  ],
+  "git": {
+    "commit": "90a60df8a1deaaf71488a3fbc315235455a35449",
+    "branch": "audit-baseline",
+    "dirty": false
+  },
+  "python": "3.9.25",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.13.1",
+    "torch": "2.3.1+cpu"
+  },
+  "config": {
+    "manifest": "<root>/cache/manifest.csv",
+    "out": "<root>/results/detections",
+    "datasets": "dreams_spindles,nap",
+    "channels": "C3,F3,F4,C4,O1,O2,Cz",
+    "recs": null
+  }
+}

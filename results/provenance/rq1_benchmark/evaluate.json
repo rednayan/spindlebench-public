@@ -1,13 +1,13 @@
 {
-  "created_utc": "2026-10-28T15:43:03+00:00",
+  "created_utc": "2026-10-30T10:10:44+00:00",
   "command": [
     "<root>/.venv/Scripts/python.exe",
     "experiments/rq1_benchmark/evaluate.py"
   ],
   "spindlebench": "0.1.0.dev0",
   "git": {
-    "commit": "79ab311cfcc9d85995f106d49631335e08bbdecb",
-    "branch": "restructure",
+    "commit": "90a60df8a1deaaf71488a3fbc315235455a35449",
+    "branch": "audit-baseline",
     "dirty": true
   },
   "python": "3.14.3",
@@ -28,5 +28,5 @@
   "config": {
     "args": []
   },
-  "seconds": 7.0
+  "seconds": 8.5
 }

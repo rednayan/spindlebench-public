@@ -5,6 +5,15 @@ rule that changes F1 changes (see `src/spindlebench/protocols/`).
 
 ## Unreleased
 
+## 0.1.0 (2026-10-30)
+
+First public release.
+
+### Detectors
+- Luna `SPINDLES` (`detectors/luna`, id `luna_spindles`, program defaults) and S5
+  (`detectors/s5`, ids `s5` and `s5_ens`, MODA weights) added, run on DREAMS and NAP and scored.
+  No protocol changed; every earlier summary row is unchanged.
+
 ### Restructure (branch `restructure`)
 - Core code moved into the `spindlebench` package (`src/spindlebench/`): event matching
   (`metrics.events`), point-mark scoring (`protocols.nap_points`, version `nap_points.v1`), NAP loaders

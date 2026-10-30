@@ -22,6 +22,7 @@ DatabaseKcomplexes/
 # per-detector virtual environments and vendored upstream repositories (own git history)
 detectors/*/.venv/
 detectors/sumo/src/
+detectors/s5/src/
 
 # trained model weights (regenerate with detectors/sumo/finetune/run_all.py)
 results/rq4/work/models/

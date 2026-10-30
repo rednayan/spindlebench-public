@@ -6,7 +6,8 @@ authors:
   - family-names: Sharma
     given-names: Nayan
     affiliation: "Technical University of Applied Sciences Würzburg-Schweinfurt (THWS)"
-version: 0.1.0.dev0
+version: 0.1.0
+date-released: "2026-10-30"
 license: MIT
 keywords:
   - sleep EEG

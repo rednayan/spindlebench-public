@@ -7,10 +7,10 @@ import pytest
 from spindlebench import paths
 
 def _ours(p):
-    """skip detector environments (.venv, .venv-sumo, ...) and upstream clones (detectors/sumo/src)"""
+    """skip detector environments (.venv, .venv-sumo, ...) and upstream clones (detectors/<name>/src)"""
     parts = p.relative_to(paths.ROOT).parts
     in_env = any(x.startswith(".venv") or x == "__pycache__" for x in parts)
-    return not in_env and parts[:3] != ("detectors", "sumo", "src")
+    return not in_env and parts[:3] not in (("detectors", "sumo", "src"), ("detectors", "s5", "src"))
 
 
 def _walk(d):
@@ -31,8 +31,14 @@ def test_script_parses(path):
     ast.parse(path.read_text(encoding="utf-8"))
 
 
+# scripts whose path-like strings are glob rules over repository paths, not files they open
+PATTERN_RULES = {"scripts/export_public.py"}
+
+
 @pytest.mark.parametrize("path", SCRIPTS, ids=lambda p: str(p.relative_to(paths.ROOT)))
 def test_no_working_directory_paths(path):
+    if path.relative_to(paths.ROOT).as_posix() in PATTERN_RULES:
+        pytest.skip("export rules are glob patterns")
     code = ast.parse(path.read_text(encoding="utf-8"))
     doc = ast.get_docstring(code) or ""
     hits = [n.value for n in ast.walk(code) if isinstance(n, ast.Constant) and isinstance(n.value, str)

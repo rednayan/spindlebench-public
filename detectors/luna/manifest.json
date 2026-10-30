@@ -1,0 +1,29 @@
+{
+  "name": "luna",
+  "ids": {
+    "luna_spindles": "Luna SPINDLES with the program defaults (fc 13.5 Hz, th 4.5, th2 2), stage-free"
+  },
+  "events": [
+    "spindle"
+  ],
+  "kind": "rule-based",
+  "method": {
+    "citation": "Purcell et al. 2017, Nat Commun 8:15930; Luna (remnrem/luna-base)",
+    "doi": "10.1038/ncomms15930"
+  },
+  "source": {
+    "url": "https://github.com/remnrem/luna-base ; https://github.com/remnrem/luna-api",
+    "commit": "PyPI lunapi 1.7.0",
+    "licence": "GPL-3.0",
+    "relation": "library called unmodified through the lunapi bindings"
+  },
+  "adapter_licence": "GPL-3.0-or-later",
+  "weights": null,
+  "environment": {
+    "type": "uv-project",
+    "python": "3.12",
+    "path": "detectors/luna",
+    "lock": "detectors/luna/uv.lock"
+  },
+  "command": "cd detectors/luna && uv sync && cd ../.. && detectors/luna/.venv/Scripts/python detectors/luna/run.py [--datasets dreams_spindles,nap] [--channels C3,...]"
+}
