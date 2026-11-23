@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-11-17T13:19:41+00:00",
+  "command": [
+    "<root>/detectors/sumo/.venv-sumov2/Scripts/python.exe",
+    "<root>/detectors/sumo/run.py",
+    "--manifest",
+    "<root>/cache_authors/manifest.csv",
+    "--out",
+    "<root>/results/sensitivity/authors_pipeline/detections",
+    "--datasets",
+    "nap",
+    "--model",
+    "sumov2"
+  ],
+  "git": {
+    "commit": "e0bc7816a79f27eda303860fb27bd0238451d35e",
+    "branch": "main",
+    "dirty": false
+  },
+  "python": "3.10.20",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "scipy": "1.15.3",
+    "torch": "2.5.1+cpu",
+    "pytorch-lightning": "2.6.6"
+  },
+  "config": {
+    "manifest": "<root>/cache_authors/manifest.csv",
+    "out": "<root>/results/sensitivity/authors_pipeline/detections",
+    "datasets": "nap",
+    "channels": null,
+    "recs": null,
+    "model": "sumov2"
+  }
+}

@@ -1,0 +1,6 @@
+dataset,recordings,flagged_%,flagged_N2_%,flagged_N2_max_%,N2_h,N2_h_clean,expert1_in_artefact,expert2_in_artefact,expert_in_artefact
+boas,20,0.88,0.43,2.37,96.35,95.89,-,-,-
+cinc2018,250,1.3,0.96,19.99,794.36,786.62,-,-,-
+dreams_spindles,8,0.66,0.46,1.5,2.39,2.38,0 / 355,0 / 409,-
+hmc,151,1.18,0.86,4.21,417.36,413.72,-,-,-
+nap,36,1.22,1.02,3.99,7.24,7.16,-,-,31 / 2252

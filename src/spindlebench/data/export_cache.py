@@ -6,6 +6,7 @@ same labels.
     uv run spindlebench cache                # writes the cache (default <repo>/cache, gitignored)
     uv run spindlebench cache --labels-only  # NAP: re-parse labels, keep the cached signals
     uv run spindlebench cache --boas-only    # append the BOAS subset (spindlebench download boas)
+    uv run spindlebench cache --only hmc,cinc2018   # append (or refresh) the named label-free datasets
 
 cache/manifest.csv           one row per recording: dataset, rec, npz path (relative to the
                              manifest, forward slashes), sf, default
@@ -24,6 +25,10 @@ Signal preprocessing is deliberately minimal and identical for every detector:
            resampled to 200 Hz
   BOAS     the six PSG EEG channels (F3 F4 C3 C4 O1 O2) against the left mastoid as
            recorded, native 256 Hz, no filter; staging only, no events (label-free analyses)
+  HMC      the four EEG channels (F4-M1 C4-M1 O2-M1 C3-M2) as recorded, native 256 Hz, no
+           filter; AASM staging only, no events
+  CinC2018 the six EEG channels (F3-M2 F4-M1 C3-M2 C4-M1 O1-M2 O2-M1) as released (200 Hz),
+           read with wfdb; AASM staging from the .arousal file, no events
 Each detector applies its own preprocessing on top (as its authors specify).
 """
 
@@ -31,6 +36,7 @@ import json
 import sys
 
 import mne
+import wfdb
 import numpy as np
 import pandas as pd
 
@@ -195,13 +201,94 @@ def boas(root):
         print("boas", rec, data.shape, sf, flush=True)
 
 
+def label_free_row(dataset, rec, subject, path, sf, default_channel, data):
+    return dict(dataset=dataset, rec=rec, subject=subject, path=path.relative_to(CACHE).as_posix(), sf=sf,
+                default_channel=default_channel, duration=data.shape[1] / sf, n_channels=data.shape[0],
+                events="", windows=json.dumps({}), excluded=False)
+
+
+HMC_STAGES = {"W": "W", "N1": "N1", "N2": "N2", "N3": "N3", "R": "REM"}
+
+
+def hmc(root):
+    """HMC nights: the EEG channels as recorded (mastoid references), native 256 Hz, µV; AASM staging
+    from <rec>_sleepscoring.txt (30-s epochs, onset in seconds from the recording start); no events"""
+    sig_dir, lab_dir = CACHE / "signals" / "hmc", CACHE / "labels" / "hmc"
+    sig_dir.mkdir(parents=True, exist_ok=True)
+    lab_dir.mkdir(parents=True, exist_ok=True)
+    for rec in (root / "RECORDS").read_text().split():
+        rec = rec.split("/")[-1].removesuffix(".edf")  # RECORDS lists recordings/SNxxx.edf
+        raw = mne.io.read_raw_edf(root / "recordings" / f"{rec}.edf", preload=True)
+        eeg = [c for c in raw.ch_names if c.startswith("EEG ")]
+        data = (raw.get_data(picks=eeg) * 1e6).astype(np.float32)
+        sf = raw.info["sfreq"]
+        names = [c.removeprefix("EEG ") for c in eeg]
+        np.savez_compressed(sig_dir / f"{rec}.npz", data=data, sf=sf, ch_names=np.array(names))
+        sc = pd.read_csv(root / "recordings" / f"{rec}_sleepscoring.txt", skipinitialspace=True)
+        sc = sc[sc["Annotation"].str.startswith("Sleep stage ")]
+        stages = np.full(int(np.ceil(data.shape[1] / sf / 30.0)), "?", dtype=object)
+        for onset, ann in zip(sc["Recording onset"].astype(float), sc["Annotation"]):
+            i = int(round(onset / 30.0))
+            assert abs(onset - 30.0 * i) < 1e-3, (rec, onset)
+            if i < len(stages):
+                stages[i] = HMC_STAGES[ann.removeprefix("Sleep stage ")]
+        write_hypno(lab_dir / f"{rec}__hypno.csv", list(stages), 30.0)
+        default = "C3-M2" if "C3-M2" in names else "C4-M1"
+        manifest.append(label_free_row("hmc", rec, int(rec[2:]), sig_dir / f"{rec}.npz", sf, default, data))
+        print("hmc", rec, data.shape, sf, flush=True)
+
+
+CINC_EEG = ["F3-M2", "F4-M1", "C3-M2", "C4-M1", "O1-M2", "O2-M1"]
+CINC_STAGES = {"W": "W", "N1": "N1", "N2": "N2", "N3": "N3", "R": "REM"}
+
+
+def cinc2018(root):
+    """CinC 2018 training subset (spindlebench download cinc2018): six EEG channels against the
+    contralateral mastoid as released, 200 Hz, µV. Stages are change points in the .arousal
+    annotation file (aux_note W N1 N2 N3 R); each lasts until the next one, and epochs before the
+    first are unscored ("?"). No events."""
+    sig_dir, lab_dir = CACHE / "signals" / "cinc2018", CACHE / "labels" / "cinc2018"
+    sig_dir.mkdir(parents=True, exist_ok=True)
+    lab_dir.mkdir(parents=True, exist_ok=True)
+    for rec in pd.read_csv(root / "records_used.csv").Record:
+        base = str(root / "training" / rec / rec)
+        r = wfdb.rdrecord(base, channel_names=CINC_EEG)
+        assert r.sig_name == CINC_EEG and set(r.units) == {"uV"}, (rec, r.sig_name, r.units)
+        data = r.p_signal.T.astype(np.float32)
+        sf = float(r.fs)
+        np.savez_compressed(sig_dir / f"{rec}.npz", data=data, sf=sf, ch_names=np.array(CINC_EEG))
+        ann = wfdb.rdann(base, "arousal")
+        change = [(s, CINC_STAGES[n]) for s, n in zip(ann.sample, ann.aux_note) if n in CINC_STAGES]
+        epoch = int(30 * sf)
+        assert all(s % epoch == 0 for s, _ in change), rec
+        stages = np.full(int(np.ceil(data.shape[1] / epoch)), "?", dtype=object)
+        for (s, st), nxt in zip(change, [c[0] for c in change[1:]] + [len(stages) * epoch]):
+            stages[s // epoch:nxt // epoch] = st
+        write_hypno(lab_dir / f"{rec}__hypno.csv", list(stages), 30.0)
+        subject = int(rec[2:].replace("-", ""))  # trXX-YYYY -> XXYYYY; one night per person
+        manifest.append(label_free_row("cinc2018", rec, subject, sig_dir / f"{rec}.npz", sf, "C3-M2", data))
+        print("cinc2018", rec, data.shape, sf, flush=True)
+
+
+LABEL_FREE = {"boas": boas, "hmc": hmc, "cinc2018": cinc2018}
+
+
+def append(names):
+    """build the named label-free datasets and replace their rows in an existing manifest"""
+    for name in names:
+        LABEL_FREE[name](paths.raw(name))
+    old = pd.read_csv(CACHE / "manifest.csv")
+    pd.concat([old[~old.dataset.isin(names)], pd.DataFrame(manifest)]).to_csv(CACHE / "manifest.csv", index=False)
+    print(f"appended {len(manifest)} recordings ({', '.join(names)}) to {CACHE}/manifest.csv")
+
+
 def main(argv=None):
     argv = sys.argv[1:] if argv is None else argv
     if "--boas-only" in argv:  # append BOAS (spindlebench download boas) to an existing cache
-        boas(paths.raw("boas"))
-        old = pd.read_csv(CACHE / "manifest.csv")
-        pd.concat([old[old.dataset != "boas"], pd.DataFrame(manifest)]).to_csv(CACHE / "manifest.csv", index=False)
-        print(f"appended {len(manifest)} BOAS recordings to {CACHE}/manifest.csv")
+        append(["boas"])
+        return
+    if "--only" in argv:
+        append(argv[argv.index("--only") + 1].split(","))
         return
     labels_only = "--labels-only" in argv
     old = pd.read_csv(CACHE / "manifest.csv") if (CACHE / "manifest.csv").exists() else None
@@ -216,6 +303,8 @@ def main(argv=None):
         boas(paths.raw("boas"))
         rows = pd.DataFrame(manifest)
         print(f"BOAS: {len(manifest) - n} recordings")
+    if old is not None:  # HMC and CinC 2018 are built only with --only: keep their rows
+        rows = pd.concat([rows, old[old.dataset.isin(["hmc", "cinc2018"])]])
     rows.to_csv(CACHE / "manifest.csv", index=False)
     manifest[:] = rows.to_dict("records")
     print(f"wrote {len(manifest)} recordings to {CACHE}/manifest.csv")

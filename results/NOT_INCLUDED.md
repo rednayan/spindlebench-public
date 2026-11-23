@@ -6,7 +6,8 @@ copy of each dataset.
 
 | what | files or rows |
 |---|---|
-| DREAMS: detector outputs | 1285 files |
+| DREAMS: detector outputs | 1907 files |
+| DREAMS: per-event expert uncertainty table | 1 file |
 | DREAMS: plots the expert events and hypnograms | 1 file |
 | NAP: plots the expert annotations | 1 file |
 | per-sample labels and stages from the expert annotations | 46 files |

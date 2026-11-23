@@ -1,0 +1,309 @@
+rule,detector,arm,P,R,F1
+E1 onset 0.5 (primary),consensus_ds,consensus_ds,0.7438,0.699,0.7207
+E1 onset 0.5 (primary),consensus_ds_corpus,consensus_ds_corpus,0.7564,0.6957,0.7247
+E1 onset 0.5 (primary),consensus_fs,consensus_fs,0.7714,0.5418,0.6365
+E1 onset 0.5 (primary),consensus_fs_corpus,consensus_fs_corpus,0.7783,0.5753,0.6615
+E1 onset 0.5 (primary),consensus_mv,consensus_mv,0.7564,0.6957,0.7247
+E1 onset 0.5 (primary),student_a7_gpu_s0,student_a7_gpu,0.8325,0.5652,0.6733
+E1 onset 0.5 (primary),student_a7_gpu_s1,student_a7_gpu,0.8416,0.5686,0.6786
+E1 onset 0.5 (primary),student_a7_gpu_s2,student_a7_gpu,0.8199,0.5786,0.6784
+E1 onset 0.5 (primary),student_a7_gpu_s3,student_a7_gpu,0.7972,0.5652,0.6614
+E1 onset 0.5 (primary),student_a7_gpu_s4,student_a7_gpu,0.8271,0.592,0.6901
+E1 onset 0.5 (primary),student_ds_gpu_s0,student_ds_gpu,0.7689,0.6789,0.7211
+E1 onset 0.5 (primary),student_ds_gpu_s1,student_ds_gpu,0.8208,0.6589,0.731
+E1 onset 0.5 (primary),student_ds_gpu_s2,student_ds_gpu,0.7866,0.6656,0.721
+E1 onset 0.5 (primary),student_ds_gpu_s3,student_ds_gpu,0.7866,0.6656,0.721
+E1 onset 0.5 (primary),student_ds_gpu_s4,student_ds_gpu,0.7778,0.6789,0.725
+E1 onset 0.5 (primary),student_luna_gpu_s0,student_luna_gpu,0.7288,0.5753,0.643
+E1 onset 0.5 (primary),student_luna_gpu_s1,student_luna_gpu,0.7401,0.5619,0.6388
+E1 onset 0.5 (primary),student_luna_gpu_s2,student_luna_gpu,0.7336,0.5251,0.6121
+E1 onset 0.5 (primary),student_luna_gpu_s3,student_luna_gpu,0.7639,0.5518,0.6408
+E1 onset 0.5 (primary),student_luna_gpu_s4,student_luna_gpu,0.7736,0.5485,0.6419
+E1 onset 0.5 (primary),student_mv_gpu_s0,student_mv_gpu,0.7901,0.6421,0.7085
+E1 onset 0.5 (primary),student_mv_gpu_s1,student_mv_gpu,0.7829,0.6756,0.7253
+E1 onset 0.5 (primary),student_mv_gpu_s2,student_mv_gpu,0.8202,0.6254,0.7097
+E1 onset 0.5 (primary),student_mv_gpu_s3,student_mv_gpu,0.8,0.6421,0.7124
+E1 onset 0.5 (primary),student_mv_gpu_s4,student_mv_gpu,0.8083,0.6488,0.7199
+E1 onset 0.5 (primary),student_rules4_fixA_gpu_s0,student_rules4_fixA_gpu,0.8319,0.6455,0.7269
+E1 onset 0.5 (primary),student_rules4_fixA_gpu_s1,student_rules4_fixA_gpu,0.8221,0.6957,0.7536
+E1 onset 0.5 (primary),student_rules4_fixA_gpu_s2,student_rules4_fixA_gpu,0.7807,0.7023,0.7394
+E1 onset 0.5 (primary),student_rules4_fixA_gpu_s3,student_rules4_fixA_gpu,0.7904,0.7191,0.7531
+E1 onset 0.5 (primary),student_rules4_fixA_gpu_s4,student_rules4_fixA_gpu,0.7962,0.6923,0.7406
+E1 onset 0.5 (primary),student_rules4_global_gpu_s0,student_rules4_global_gpu,0.8347,0.6589,0.7364
+E1 onset 0.5 (primary),student_rules4_global_gpu_s1,student_rules4_global_gpu,0.8261,0.6355,0.7183
+E1 onset 0.5 (primary),student_rules4_global_gpu_s2,student_rules4_global_gpu,0.8161,0.6087,0.6973
+E1 onset 0.5 (primary),student_rules4_global_gpu_s3,student_rules4_global_gpu,0.8268,0.6388,0.7208
+E1 onset 0.5 (primary),student_rules4_global_gpu_s4,student_rules4_global_gpu,0.7984,0.6622,0.7239
+E1 onset 0.5 (primary),student_rules4_gpu_s0,student_rules4_gpu,0.4426,0.7993,0.5697
+E1 onset 0.5 (primary),student_rules4_gpu_s1,student_rules4_gpu,0.4555,0.8395,0.5906
+E1 onset 0.5 (primary),student_rules4_gpu_s2,student_rules4_gpu,0.497,0.8294,0.6216
+E1 onset 0.5 (primary),student_rules4_gpu_s3,student_rules4_gpu,0.5424,0.8127,0.6506
+E1 onset 0.5 (primary),student_rules4_gpu_s4,student_rules4_gpu,0.4222,0.8528,0.5648
+E1 onset 0.5 (primary),student_rules4_lam0_gpu_s0,student_rules4_lam0_gpu,0.6524,0.7659,0.7046
+E1 onset 0.5 (primary),student_rules4_lam0_gpu_s1,student_rules4_lam0_gpu,0.7273,0.7759,0.7508
+E1 onset 0.5 (primary),student_rules4_lam0_gpu_s2,student_rules4_lam0_gpu,0.6734,0.786,0.7253
+E1 onset 0.5 (primary),student_rules4_lam0_gpu_s3,student_rules4_lam0_gpu,0.7517,0.7291,0.7402
+E1 onset 0.5 (primary),student_rules4_lam0_gpu_s4,student_rules4_lam0_gpu,0.6946,0.7759,0.733
+E1 onset 0.5 (primary),student_rules4_noB_gpu_s0,student_rules4_noB_gpu,0.6096,0.7625,0.6776
+E1 onset 0.5 (primary),student_rules4_noB_gpu_s1,student_rules4_noB_gpu,0.5935,0.796,0.68
+E1 onset 0.5 (primary),student_rules4_noB_gpu_s2,student_rules4_noB_gpu,0.6696,0.7726,0.7174
+E1 onset 0.5 (primary),student_rules4_noB_gpu_s3,student_rules4_noB_gpu,0.7915,0.5585,0.6549
+E1 onset 0.5 (primary),student_rules4_noB_gpu_s4,student_rules4_noB_gpu,0.5653,0.796,0.6611
+E1 onset 0.5 (primary),student_rules4_nohead2_gpu_s0,student_rules4_nohead2_gpu,0.4838,0.7993,0.6028
+E1 onset 0.5 (primary),student_rules4_nohead2_gpu_s1,student_rules4_nohead2_gpu,0.8293,0.5686,0.6746
+E1 onset 0.5 (primary),student_rules4_nohead2_gpu_s2,student_rules4_nohead2_gpu,0.5,0.7826,0.6102
+E1 onset 0.5 (primary),student_rules4_nohead2_gpu_s3,student_rules4_nohead2_gpu,0.5206,0.8027,0.6316
+E1 onset 0.5 (primary),student_rules4_nohead2_gpu_s4,student_rules4_nohead2_gpu,0.4293,0.8227,0.5642
+E1 onset 0.5 (primary),student_soft_gpu_s0,student_soft_gpu,0.8203,0.5953,0.6899
+E1 onset 0.5 (primary),student_soft_gpu_s1,student_soft_gpu,0.8194,0.6221,0.7072
+E1 onset 0.5 (primary),student_soft_gpu_s2,student_soft_gpu,0.8182,0.4816,0.6063
+E1 onset 0.5 (primary),student_soft_gpu_s3,student_soft_gpu,0.8108,0.5017,0.6198
+E1 onset 0.5 (primary),student_soft_gpu_s4,student_soft_gpu,0.8374,0.5686,0.6773
+E1 onset 0.5 (primary),student_ucsd_gpu_s0,student_ucsd_gpu,0.5374,0.6488,0.5879
+E1 onset 0.5 (primary),student_ucsd_gpu_s1,student_ucsd_gpu,0.4387,0.7425,0.5516
+E1 onset 0.5 (primary),student_ucsd_gpu_s2,student_ucsd_gpu,0.5888,0.6656,0.6248
+E1 onset 0.5 (primary),student_ucsd_gpu_s3,student_ucsd_gpu,0.6233,0.6254,0.6244
+E1 onset 0.5 (primary),student_ucsd_gpu_s4,student_ucsd_gpu,0.5427,0.6589,0.5952
+E1 onset 0.5 (primary),student_yasa_gpu_s0,student_yasa_gpu,0.8725,0.2977,0.4439
+E1 onset 0.5 (primary),student_yasa_gpu_s1,student_yasa_gpu,0.9143,0.3211,0.4752
+E1 onset 0.5 (primary),student_yasa_gpu_s2,student_yasa_gpu,0.8772,0.3344,0.4843
+E1 onset 0.5 (primary),student_yasa_gpu_s3,student_yasa_gpu,0.9048,0.3177,0.4703
+E1 onset 0.5 (primary),student_yasa_gpu_s4,student_yasa_gpu,0.9053,0.2876,0.4365
+E1 onset 0.5 (primary),a7,a7,0.7283,0.6187,0.6691
+E1 onset 0.5 (primary),luna_spindles,luna_spindles,0.756,0.5284,0.622
+E1 onset 0.5 (primary),wonambi_ucsd,wonambi_ucsd,0.4544,0.7157,0.5558
+E1 onset 0.5 (primary),yasa_default,yasa_default,0.9111,0.2742,0.4216
+E1 onset 0.5 (primary),sumo,sumo,0.8827,0.4783,0.6204
+E1 onset 0.5 (primary),sumov2,sumov2,0.8571,0.5819,0.6932
+E1 onset 0.5 (primary),wonambi_moelle2011,wonambi_moelle2011,0.6756,0.592,0.631
+E1 onset 0.25,consensus_ds,consensus_ds,0.6477,0.6087,0.6276
+E1 onset 0.25,consensus_ds_corpus,consensus_ds_corpus,0.6618,0.6087,0.6341
+E1 onset 0.25,consensus_fs,consensus_fs,0.6571,0.4615,0.5422
+E1 onset 0.25,consensus_fs_corpus,consensus_fs_corpus,0.6833,0.505,0.5808
+E1 onset 0.25,consensus_mv,consensus_mv,0.6618,0.6087,0.6341
+E1 onset 0.25,student_a7_gpu_s0,student_a7_gpu,0.6995,0.4749,0.5657
+E1 onset 0.25,student_a7_gpu_s1,student_a7_gpu,0.7228,0.4883,0.5828
+E1 onset 0.25,student_a7_gpu_s2,student_a7_gpu,0.6919,0.4883,0.5725
+E1 onset 0.25,student_a7_gpu_s3,student_a7_gpu,0.6509,0.4615,0.5401
+E1 onset 0.25,student_a7_gpu_s4,student_a7_gpu,0.7009,0.5017,0.5848
+E1 onset 0.25,student_ds_gpu_s0,student_ds_gpu,0.6818,0.602,0.6394
+E1 onset 0.25,student_ds_gpu_s1,student_ds_gpu,0.7,0.5619,0.6234
+E1 onset 0.25,student_ds_gpu_s2,student_ds_gpu,0.6838,0.5786,0.6268
+E1 onset 0.25,student_ds_gpu_s3,student_ds_gpu,0.6759,0.5719,0.6196
+E1 onset 0.25,student_ds_gpu_s4,student_ds_gpu,0.6628,0.5786,0.6179
+E1 onset 0.25,student_luna_gpu_s0,student_luna_gpu,0.6229,0.4916,0.5495
+E1 onset 0.25,student_luna_gpu_s1,student_luna_gpu,0.6432,0.4883,0.5551
+E1 onset 0.25,student_luna_gpu_s2,student_luna_gpu,0.6262,0.4482,0.5224
+E1 onset 0.25,student_luna_gpu_s3,student_luna_gpu,0.6481,0.4682,0.5437
+E1 onset 0.25,student_luna_gpu_s4,student_luna_gpu,0.6651,0.4716,0.5519
+E1 onset 0.25,student_mv_gpu_s0,student_mv_gpu,0.6626,0.5385,0.5941
+E1 onset 0.25,student_mv_gpu_s1,student_mv_gpu,0.6628,0.5719,0.614
+E1 onset 0.25,student_mv_gpu_s2,student_mv_gpu,0.693,0.5284,0.5996
+E1 onset 0.25,student_mv_gpu_s3,student_mv_gpu,0.675,0.5418,0.6011
+E1 onset 0.25,student_mv_gpu_s4,student_mv_gpu,0.6833,0.5485,0.6085
+E1 onset 0.25,student_rules4_fixA_gpu_s0,student_rules4_fixA_gpu,0.7112,0.5518,0.6215
+E1 onset 0.25,student_rules4_fixA_gpu_s1,student_rules4_fixA_gpu,0.7115,0.602,0.6522
+E1 onset 0.25,student_rules4_fixA_gpu_s2,student_rules4_fixA_gpu,0.6691,0.602,0.6338
+E1 onset 0.25,student_rules4_fixA_gpu_s3,student_rules4_fixA_gpu,0.6765,0.6154,0.6445
+E1 onset 0.25,student_rules4_fixA_gpu_s4,student_rules4_fixA_gpu,0.6769,0.5886,0.6297
+E1 onset 0.25,student_rules4_global_gpu_s0,student_rules4_global_gpu,0.7119,0.5619,0.628
+E1 onset 0.25,student_rules4_global_gpu_s1,student_rules4_global_gpu,0.7087,0.5452,0.6163
+E1 onset 0.25,student_rules4_global_gpu_s2,student_rules4_global_gpu,0.6996,0.5217,0.5977
+E1 onset 0.25,student_rules4_global_gpu_s3,student_rules4_global_gpu,0.71,0.5485,0.6189
+E1 onset 0.25,student_rules4_global_gpu_s4,student_rules4_global_gpu,0.6774,0.5619,0.6143
+E1 onset 0.25,student_rules4_gpu_s0,student_rules4_gpu,0.3704,0.6689,0.4768
+E1 onset 0.25,student_rules4_gpu_s1,student_rules4_gpu,0.4047,0.7458,0.5247
+E1 onset 0.25,student_rules4_gpu_s2,student_rules4_gpu,0.4048,0.6756,0.5063
+E1 onset 0.25,student_rules4_gpu_s3,student_rules4_gpu,0.4688,0.7023,0.5622
+E1 onset 0.25,student_rules4_gpu_s4,student_rules4_gpu,0.3609,0.7291,0.4828
+E1 onset 0.25,student_rules4_lam0_gpu_s0,student_rules4_lam0_gpu,0.547,0.6421,0.5908
+E1 onset 0.25,student_rules4_lam0_gpu_s1,student_rules4_lam0_gpu,0.6301,0.6722,0.6505
+E1 onset 0.25,student_rules4_lam0_gpu_s2,student_rules4_lam0_gpu,0.5673,0.6622,0.6111
+E1 onset 0.25,student_rules4_lam0_gpu_s3,student_rules4_lam0_gpu,0.6552,0.6355,0.6452
+E1 onset 0.25,student_rules4_lam0_gpu_s4,student_rules4_lam0_gpu,0.6018,0.6722,0.6351
+E1 onset 0.25,student_rules4_noB_gpu_s0,student_rules4_noB_gpu,0.5267,0.6589,0.5854
+E1 onset 0.25,student_rules4_noB_gpu_s1,student_rules4_noB_gpu,0.5162,0.6923,0.5914
+E1 onset 0.25,student_rules4_noB_gpu_s2,student_rules4_noB_gpu,0.5797,0.6689,0.6211
+E1 onset 0.25,student_rules4_noB_gpu_s3,student_rules4_noB_gpu,0.673,0.4749,0.5569
+E1 onset 0.25,student_rules4_noB_gpu_s4,student_rules4_noB_gpu,0.4846,0.6823,0.5667
+E1 onset 0.25,student_rules4_nohead2_gpu_s0,student_rules4_nohead2_gpu,0.419,0.6923,0.5221
+E1 onset 0.25,student_rules4_nohead2_gpu_s1,student_rules4_nohead2_gpu,0.7024,0.4816,0.5714
+E1 onset 0.25,student_rules4_nohead2_gpu_s2,student_rules4_nohead2_gpu,0.4295,0.6722,0.5241
+E1 onset 0.25,student_rules4_nohead2_gpu_s3,student_rules4_nohead2_gpu,0.4469,0.689,0.5421
+E1 onset 0.25,student_rules4_nohead2_gpu_s4,student_rules4_nohead2_gpu,0.3613,0.6923,0.4748
+E1 onset 0.25,student_soft_gpu_s0,student_soft_gpu,0.7005,0.5084,0.5891
+E1 onset 0.25,student_soft_gpu_s1,student_soft_gpu,0.7048,0.5351,0.6084
+E1 onset 0.25,student_soft_gpu_s2,student_soft_gpu,0.7102,0.4181,0.5263
+E1 onset 0.25,student_soft_gpu_s3,student_soft_gpu,0.6973,0.4314,0.5331
+E1 onset 0.25,student_soft_gpu_s4,student_soft_gpu,0.7094,0.4816,0.5737
+E1 onset 0.25,student_ucsd_gpu_s0,student_ucsd_gpu,0.4571,0.5518,0.5
+E1 onset 0.25,student_ucsd_gpu_s1,student_ucsd_gpu,0.3735,0.6321,0.4696
+E1 onset 0.25,student_ucsd_gpu_s2,student_ucsd_gpu,0.5059,0.5719,0.5369
+E1 onset 0.25,student_ucsd_gpu_s3,student_ucsd_gpu,0.5433,0.5452,0.5442
+E1 onset 0.25,student_ucsd_gpu_s4,student_ucsd_gpu,0.4545,0.5518,0.4985
+E1 onset 0.25,student_yasa_gpu_s0,student_yasa_gpu,0.7843,0.2676,0.399
+E1 onset 0.25,student_yasa_gpu_s1,student_yasa_gpu,0.7905,0.2776,0.4109
+E1 onset 0.25,student_yasa_gpu_s2,student_yasa_gpu,0.7807,0.2977,0.431
+E1 onset 0.25,student_yasa_gpu_s3,student_yasa_gpu,0.7905,0.2776,0.4109
+E1 onset 0.25,student_yasa_gpu_s4,student_yasa_gpu,0.7474,0.2375,0.3604
+E1 onset 0.25,a7,a7,0.6024,0.5117,0.5533
+E1 onset 0.25,luna_spindles,luna_spindles,0.6459,0.4515,0.5315
+E1 onset 0.25,wonambi_ucsd,wonambi_ucsd,0.3758,0.592,0.4597
+E1 onset 0.25,yasa_default,yasa_default,0.8111,0.2441,0.3753
+E1 onset 0.25,sumo,sumo,0.8025,0.4348,0.564
+E1 onset 0.25,sumov2,sumov2,0.798,0.5418,0.6454
+E1 onset 0.25,wonambi_moelle2011,wonambi_moelle2011,0.5802,0.5084,0.5419
+E1 IoU 0.2,consensus_ds,consensus_ds,0.7651,0.7191,0.7414
+E1 IoU 0.2,consensus_ds_corpus,consensus_ds_corpus,0.7745,0.7124,0.7422
+E1 IoU 0.2,consensus_fs,consensus_fs,0.8,0.5619,0.6601
+E1 IoU 0.2,consensus_fs_corpus,consensus_fs_corpus,0.8009,0.592,0.6808
+E1 IoU 0.2,consensus_mv,consensus_mv,0.7745,0.7124,0.7422
+E1 IoU 0.2,student_a7_gpu_s0,student_a7_gpu,0.8571,0.5819,0.6932
+E1 IoU 0.2,student_a7_gpu_s1,student_a7_gpu,0.8663,0.5853,0.6986
+E1 IoU 0.2,student_a7_gpu_s2,student_a7_gpu,0.8436,0.5953,0.698
+E1 IoU 0.2,student_a7_gpu_s3,student_a7_gpu,0.8302,0.5886,0.6888
+E1 IoU 0.2,student_a7_gpu_s4,student_a7_gpu,0.8505,0.6087,0.7096
+E1 IoU 0.2,student_ds_gpu_s0,student_ds_gpu,0.7879,0.6957,0.7389
+E1 IoU 0.2,student_ds_gpu_s1,student_ds_gpu,0.8333,0.6689,0.7421
+E1 IoU 0.2,student_ds_gpu_s2,student_ds_gpu,0.8063,0.6823,0.7391
+E1 IoU 0.2,student_ds_gpu_s3,student_ds_gpu,0.7945,0.6722,0.7283
+E1 IoU 0.2,student_ds_gpu_s4,student_ds_gpu,0.8046,0.7023,0.75
+E1 IoU 0.2,student_luna_gpu_s0,student_luna_gpu,0.7458,0.5886,0.6579
+E1 IoU 0.2,student_luna_gpu_s1,student_luna_gpu,0.7709,0.5853,0.6654
+E1 IoU 0.2,student_luna_gpu_s2,student_luna_gpu,0.757,0.5418,0.6316
+E1 IoU 0.2,student_luna_gpu_s3,student_luna_gpu,0.787,0.5686,0.6602
+E1 IoU 0.2,student_luna_gpu_s4,student_luna_gpu,0.7972,0.5652,0.6614
+E1 IoU 0.2,student_mv_gpu_s0,student_mv_gpu,0.7984,0.6488,0.7159
+E1 IoU 0.2,student_mv_gpu_s1,student_mv_gpu,0.7984,0.689,0.7397
+E1 IoU 0.2,student_mv_gpu_s2,student_mv_gpu,0.8333,0.6355,0.7211
+E1 IoU 0.2,student_mv_gpu_s3,student_mv_gpu,0.8042,0.6455,0.7161
+E1 IoU 0.2,student_mv_gpu_s4,student_mv_gpu,0.8208,0.6589,0.731
+E1 IoU 0.2,student_rules4_fixA_gpu_s0,student_rules4_fixA_gpu,0.8491,0.6589,0.742
+E1 IoU 0.2,student_rules4_fixA_gpu_s1,student_rules4_fixA_gpu,0.834,0.7057,0.7645
+E1 IoU 0.2,student_rules4_fixA_gpu_s2,student_rules4_fixA_gpu,0.7918,0.7124,0.75
+E1 IoU 0.2,student_rules4_fixA_gpu_s3,student_rules4_fixA_gpu,0.8125,0.7391,0.7741
+E1 IoU 0.2,student_rules4_fixA_gpu_s4,student_rules4_fixA_gpu,0.8115,0.7057,0.7549
+E1 IoU 0.2,student_rules4_global_gpu_s0,student_rules4_global_gpu,0.8432,0.6656,0.7439
+E1 IoU 0.2,student_rules4_global_gpu_s1,student_rules4_global_gpu,0.8435,0.6488,0.7335
+E1 IoU 0.2,student_rules4_global_gpu_s2,student_rules4_global_gpu,0.8296,0.6187,0.7088
+E1 IoU 0.2,student_rules4_global_gpu_s3,student_rules4_global_gpu,0.8442,0.6522,0.7358
+E1 IoU 0.2,student_rules4_global_gpu_s4,student_rules4_global_gpu,0.8145,0.6756,0.7386
+E1 IoU 0.2,student_rules4_gpu_s0,student_rules4_gpu,0.4759,0.8595,0.6126
+E1 IoU 0.2,student_rules4_gpu_s1,student_rules4_gpu,0.4791,0.8829,0.6212
+E1 IoU 0.2,student_rules4_gpu_s2,student_rules4_gpu,0.523,0.8729,0.6541
+E1 IoU 0.2,student_rules4_gpu_s3,student_rules4_gpu,0.567,0.8495,0.6801
+E1 IoU 0.2,student_rules4_gpu_s4,student_rules4_gpu,0.4487,0.9064,0.6002
+E1 IoU 0.2,student_rules4_lam0_gpu_s0,student_rules4_lam0_gpu,0.6923,0.8127,0.7477
+E1 IoU 0.2,student_rules4_lam0_gpu_s1,student_rules4_lam0_gpu,0.7555,0.806,0.7799
+E1 IoU 0.2,student_rules4_lam0_gpu_s2,student_rules4_lam0_gpu,0.6934,0.8094,0.7469
+E1 IoU 0.2,student_rules4_lam0_gpu_s3,student_rules4_lam0_gpu,0.769,0.7458,0.7572
+E1 IoU 0.2,student_rules4_lam0_gpu_s4,student_rules4_lam0_gpu,0.7216,0.806,0.7615
+E1 IoU 0.2,student_rules4_noB_gpu_s0,student_rules4_noB_gpu,0.6337,0.7926,0.7043
+E1 IoU 0.2,student_rules4_noB_gpu_s1,student_rules4_noB_gpu,0.6135,0.8227,0.7029
+E1 IoU 0.2,student_rules4_noB_gpu_s2,student_rules4_noB_gpu,0.6841,0.7893,0.7329
+E1 IoU 0.2,student_rules4_noB_gpu_s3,student_rules4_noB_gpu,0.8246,0.5819,0.6824
+E1 IoU 0.2,student_rules4_noB_gpu_s4,student_rules4_noB_gpu,0.5962,0.8395,0.6972
+E1 IoU 0.2,student_rules4_nohead2_gpu_s0,student_rules4_nohead2_gpu,0.5182,0.8562,0.6456
+E1 IoU 0.2,student_rules4_nohead2_gpu_s1,student_rules4_nohead2_gpu,0.8488,0.5819,0.6905
+E1 IoU 0.2,student_rules4_nohead2_gpu_s2,student_rules4_nohead2_gpu,0.5171,0.8094,0.631
+E1 IoU 0.2,student_rules4_nohead2_gpu_s3,student_rules4_nohead2_gpu,0.5315,0.8194,0.6447
+E1 IoU 0.2,student_rules4_nohead2_gpu_s4,student_rules4_nohead2_gpu,0.438,0.8395,0.5757
+E1 IoU 0.2,student_soft_gpu_s0,student_soft_gpu,0.8387,0.6087,0.7054
+E1 IoU 0.2,student_soft_gpu_s1,student_soft_gpu,0.837,0.6355,0.7224
+E1 IoU 0.2,student_soft_gpu_s2,student_soft_gpu,0.858,0.505,0.6358
+E1 IoU 0.2,student_soft_gpu_s3,student_soft_gpu,0.8432,0.5217,0.6446
+E1 IoU 0.2,student_soft_gpu_s4,student_soft_gpu,0.8621,0.5853,0.6972
+E1 IoU 0.2,student_ucsd_gpu_s0,student_ucsd_gpu,0.5568,0.6722,0.6091
+E1 IoU 0.2,student_ucsd_gpu_s1,student_ucsd_gpu,0.4605,0.7793,0.5789
+E1 IoU 0.2,student_ucsd_gpu_s2,student_ucsd_gpu,0.6036,0.6823,0.6405
+E1 IoU 0.2,student_ucsd_gpu_s3,student_ucsd_gpu,0.64,0.6421,0.6411
+E1 IoU 0.2,student_ucsd_gpu_s4,student_ucsd_gpu,0.562,0.6823,0.6163
+E1 IoU 0.2,student_yasa_gpu_s0,student_yasa_gpu,0.902,0.3077,0.4589
+E1 IoU 0.2,student_yasa_gpu_s1,student_yasa_gpu,0.9238,0.3244,0.4802
+E1 IoU 0.2,student_yasa_gpu_s2,student_yasa_gpu,0.886,0.3378,0.4891
+E1 IoU 0.2,student_yasa_gpu_s3,student_yasa_gpu,0.9143,0.3211,0.4752
+E1 IoU 0.2,student_yasa_gpu_s4,student_yasa_gpu,0.9158,0.291,0.4416
+E1 IoU 0.2,a7,a7,0.7756,0.6589,0.7125
+E1 IoU 0.2,luna_spindles,luna_spindles,0.7847,0.5485,0.6457
+E1 IoU 0.2,wonambi_ucsd,wonambi_ucsd,0.4713,0.7425,0.5766
+E1 IoU 0.2,yasa_default,yasa_default,0.9333,0.2809,0.4319
+E1 IoU 0.2,sumo,sumo,0.9012,0.4883,0.6334
+E1 IoU 0.2,sumov2,sumov2,0.8768,0.5953,0.7092
+E1 IoU 0.2,wonambi_moelle2011,wonambi_moelle2011,0.6947,0.6087,0.6488
+E2 onset 0.5,consensus_ds,consensus_ds,0.716,0.7683,0.7412
+E2 onset 0.5,consensus_ds_corpus,consensus_ds_corpus,0.7177,0.7587,0.7377
+E2 onset 0.5,consensus_fs,consensus_fs,0.7472,0.6381,0.6884
+E2 onset 0.5,consensus_fs_corpus,consensus_fs_corpus,0.7482,0.6603,0.7015
+E2 onset 0.5,consensus_mv,consensus_mv,0.7177,0.7587,0.7377
+E2 onset 0.5,student_a7_gpu_s0,student_a7_gpu,0.7309,0.5778,0.6454
+E2 onset 0.5,student_a7_gpu_s1,student_a7_gpu,0.7379,0.581,0.6501
+E2 onset 0.5,student_a7_gpu_s2,student_a7_gpu,0.717,0.6032,0.6552
+E2 onset 0.5,student_a7_gpu_s3,student_a7_gpu,0.7241,0.6,0.6562
+E2 onset 0.5,student_a7_gpu_s4,student_a7_gpu,0.7331,0.619,0.6713
+E2 onset 0.5,student_ds_gpu_s0,student_ds_gpu,0.6894,0.8032,0.7419
+E2 onset 0.5,student_ds_gpu_s1,student_ds_gpu,0.7444,0.7397,0.742
+E2 onset 0.5,student_ds_gpu_s2,student_ds_gpu,0.7151,0.7651,0.7393
+E2 onset 0.5,student_ds_gpu_s3,student_ds_gpu,0.7181,0.7683,0.7423
+E2 onset 0.5,student_ds_gpu_s4,student_ds_gpu,0.7251,0.7873,0.7549
+E2 onset 0.5,student_luna_gpu_s0,student_luna_gpu,0.6686,0.7238,0.6951
+E2 onset 0.5,student_luna_gpu_s1,student_luna_gpu,0.6828,0.7175,0.6997
+E2 onset 0.5,student_luna_gpu_s2,student_luna_gpu,0.6969,0.7079,0.7024
+E2 onset 0.5,student_luna_gpu_s3,student_luna_gpu,0.7338,0.7175,0.7255
+E2 onset 0.5,student_luna_gpu_s4,student_luna_gpu,0.7143,0.6984,0.7063
+E2 onset 0.5,student_mv_gpu_s0,student_mv_gpu,0.7205,0.7365,0.7284
+E2 onset 0.5,student_mv_gpu_s1,student_mv_gpu,0.7151,0.7651,0.7393
+E2 onset 0.5,student_mv_gpu_s2,student_mv_gpu,0.7517,0.7111,0.7308
+E2 onset 0.5,student_mv_gpu_s3,student_mv_gpu,0.739,0.746,0.7425
+E2 onset 0.5,student_mv_gpu_s4,student_mv_gpu,0.7273,0.7365,0.7319
+E2 onset 0.5,student_rules4_fixA_gpu_s0,student_rules4_fixA_gpu,0.7466,0.6921,0.7183
+E2 onset 0.5,student_rules4_fixA_gpu_s1,student_rules4_fixA_gpu,0.725,0.7365,0.7307
+E2 onset 0.5,student_rules4_fixA_gpu_s2,student_rules4_fixA_gpu,0.7302,0.7905,0.7591
+E2 onset 0.5,student_rules4_fixA_gpu_s3,student_rules4_fixA_gpu,0.7171,0.7968,0.7549
+E2 onset 0.5,student_rules4_fixA_gpu_s4,student_rules4_fixA_gpu,0.7126,0.7556,0.7334
+E2 onset 0.5,student_rules4_global_gpu_s0,student_rules4_global_gpu,0.7417,0.7111,0.7261
+E2 onset 0.5,student_rules4_global_gpu_s1,student_rules4_global_gpu,0.7374,0.6952,0.7157
+E2 onset 0.5,student_rules4_global_gpu_s2,student_rules4_global_gpu,0.7535,0.6794,0.7145
+E2 onset 0.5,student_rules4_global_gpu_s3,student_rules4_global_gpu,0.7576,0.7143,0.7353
+E2 onset 0.5,student_rules4_global_gpu_s4,student_rules4_global_gpu,0.7116,0.7206,0.7161
+E2 onset 0.5,student_rules4_gpu_s0,student_rules4_gpu,0.3983,0.9079,0.5537
+E2 onset 0.5,student_rules4_gpu_s1,student_rules4_gpu,0.3864,0.9397,0.5476
+E2 onset 0.5,student_rules4_gpu_s2,student_rules4_gpu,0.4246,0.9111,0.5792
+E2 onset 0.5,student_rules4_gpu_s3,student_rules4_gpu,0.4672,0.9048,0.6162
+E2 onset 0.5,student_rules4_gpu_s4,student_rules4_gpu,0.3533,0.9365,0.513
+E2 onset 0.5,student_rules4_lam0_gpu_s0,student_rules4_lam0_gpu,0.5914,0.873,0.7051
+E2 onset 0.5,student_rules4_lam0_gpu_s1,student_rules4_lam0_gpu,0.6233,0.8508,0.7195
+E2 onset 0.5,student_rules4_lam0_gpu_s2,student_rules4_lam0_gpu,0.5849,0.8857,0.7045
+E2 onset 0.5,student_rules4_lam0_gpu_s3,student_rules4_lam0_gpu,0.6667,0.8254,0.7376
+E2 onset 0.5,student_rules4_lam0_gpu_s4,student_rules4_lam0_gpu,0.5776,0.8508,0.6881
+E2 onset 0.5,student_rules4_noB_gpu_s0,student_rules4_noB_gpu,0.5408,0.8413,0.6584
+E2 onset 0.5,student_rules4_noB_gpu_s1,student_rules4_noB_gpu,0.5119,0.8857,0.6488
+E2 onset 0.5,student_rules4_noB_gpu_s2,student_rules4_noB_gpu,0.5783,0.8444,0.6865
+E2 onset 0.5,student_rules4_noB_gpu_s3,student_rules4_noB_gpu,0.7143,0.5714,0.6349
+E2 onset 0.5,student_rules4_noB_gpu_s4,student_rules4_noB_gpu,0.4938,0.8825,0.6333
+E2 onset 0.5,student_rules4_nohead2_gpu_s0,student_rules4_nohead2_gpu,0.425,0.9175,0.5809
+E2 onset 0.5,student_rules4_nohead2_gpu_s1,student_rules4_nohead2_gpu,0.7149,0.5651,0.6312
+E2 onset 0.5,student_rules4_nohead2_gpu_s2,student_rules4_nohead2_gpu,0.4377,0.8921,0.5873
+E2 onset 0.5,student_rules4_nohead2_gpu_s3,student_rules4_nohead2_gpu,0.4526,0.8794,0.5976
+E2 onset 0.5,student_rules4_nohead2_gpu_s4,student_rules4_nohead2_gpu,0.3662,0.9206,0.5239
+E2 onset 0.5,student_soft_gpu_s0,student_soft_gpu,0.759,0.6698,0.7116
+E2 onset 0.5,student_soft_gpu_s1,student_soft_gpu,0.7239,0.6825,0.7026
+E2 onset 0.5,student_soft_gpu_s2,student_soft_gpu,0.7919,0.5556,0.653
+E2 onset 0.5,student_soft_gpu_s3,student_soft_gpu,0.7875,0.6,0.6811
+E2 onset 0.5,student_soft_gpu_s4,student_soft_gpu,0.7891,0.6413,0.7075
+E2 onset 0.5,student_ucsd_gpu_s0,student_ucsd_gpu,0.4839,0.7651,0.5929
+E2 onset 0.5,student_ucsd_gpu_s1,student_ucsd_gpu,0.3836,0.8635,0.5312
+E2 onset 0.5,student_ucsd_gpu_s2,student_ucsd_gpu,0.539,0.7683,0.6335
+E2 onset 0.5,student_ucsd_gpu_s3,student_ucsd_gpu,0.558,0.7175,0.6278
+E2 onset 0.5,student_ucsd_gpu_s4,student_ucsd_gpu,0.5,0.7968,0.6144
+E2 onset 0.5,student_yasa_gpu_s0,student_yasa_gpu,0.8491,0.2857,0.4276
+E2 onset 0.5,student_yasa_gpu_s1,student_yasa_gpu,0.8448,0.3111,0.4548
+E2 onset 0.5,student_yasa_gpu_s2,student_yasa_gpu,0.816,0.3238,0.4636
+E2 onset 0.5,student_yasa_gpu_s3,student_yasa_gpu,0.8421,0.3048,0.4476
+E2 onset 0.5,student_yasa_gpu_s4,student_yasa_gpu,0.84,0.2667,0.4048
+E2 onset 0.5,a7,a7,0.6783,0.6159,0.6456
+E2 onset 0.5,luna_spindles,luna_spindles,0.7463,0.6349,0.6861
+E2 onset 0.5,wonambi_ucsd,wonambi_ucsd,0.4291,0.8063,0.5601
+E2 onset 0.5,yasa_default,yasa_default,0.883,0.2635,0.4059
+E2 onset 0.5,sumo,sumo,0.9419,0.5143,0.6653
+E2 onset 0.5,sumov2,sumov2,0.8851,0.6603,0.7564
+E2 onset 0.5,wonambi_moelle2011,wonambi_moelle2011,0.6981,0.7048,0.7014

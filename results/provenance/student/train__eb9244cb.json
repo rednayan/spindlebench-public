@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-06T11:16:56+00:00",
+  "command": [
+    "~/AppData/Local/uv/cache/builds-v0/.tmpRB2kVN/Scripts/python.exe",
+    "train.py",
+    "--arm",
+    "student_rules4",
+    "--seed",
+    "0",
+    "--track",
+    "gpu",
+    "--device",
+    "cpu",
+    "--max-batches",
+    "2",
+    "--no-val",
+    "--tag",
+    "smoke"
+  ],
+  "spindlebench": "0.1.0",
+  "git": {
+    "commit": "bc5f5ba8660be648377df642883950d2d94a51aa",
+    "branch": "main",
+    "dirty": true
+  },
+  "python": "3.14.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.1",
+    "matplotlib": "3.11.2",
+    "affiliation": "1.0",
+    "torch": "2.14.1"
+  },
+  "uv_lock_sha256": "fae56252ca41381e55e998a603ba7ba0c41521392cbe907c9e06cf2db56c44bd",
+  "protocols": [
+    "artefacts.v1"
+  ],
+  "config": {
+    "args": [
+      "--arm",
+      "student_rules4",
+      "--seed",
+      "0",
+      "--track",
+      "gpu",
+      "--device",
+      "cpu",
+      "--max-batches",
+      "2",
+      "--no-val",
+      "--tag",
+      "smoke"
+    ]
+  },
+  "seconds": 16.2
+}

@@ -5,7 +5,7 @@ Human ceiling from MASS SS2 annotations (plan_nov_dec.md, workstream A). No sign
 
 MASS SS2 annotations (Borealis doi:10.5683/SP3/Y889CS; cite O'Reilly et al. 2014, J Sleep Res,
 doi:10.1111/jsr.12169): 19 young adults, whole nights, C3, R&K stages in 20 s epochs; spindles
-scored by expert 1 (all 19) and expert 2 (15). Files in MASS_data/ (not in git).
+scored by expert 1 (all 19) and expert 2 (15). Files in datasets/MASS_data/ (not in git).
 
 For the 15 people with both experts, expert 2 is scored against expert 1 (and the reverse; F1 is
 symmetric) exactly as a detector would be:

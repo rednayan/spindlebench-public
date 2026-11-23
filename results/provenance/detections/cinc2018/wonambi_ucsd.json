@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-03T12:28:26+00:00",
+  "command": [
+    "<root>/detectors/wonambi/.venv/Scripts/python.exe",
+    "detectors/wonambi/run.py",
+    "--datasets",
+    "cinc2018",
+    "--recs",
+    "tr12-0804,tr12-0440,tr04-0702,tr11-0734,tr13-0819,tr05-0910,tr05-0403,tr05-0028,tr08-0295,tr09-0049,tr05-0400,tr13-0226,tr05-0327,tr05-0418,tr06-0532,tr13-0387,tr05-0949,tr03-0921,tr07-0841,tr06-0282,tr03-0592,tr05-0744,tr05-0334,tr04-0269,tr12-0463,tr06-0862,tr03-1010,tr06-0694,tr05-0405,tr06-0084,tr11-0334,tr07-0394,tr10-0511,tr12-0682,tr10-0740,tr09-0423,tr05-0449,tr12-0503,tr03-0906,tr05-1042,tr03-0879,tr03-0713,tr12-0519,tr05-1687,tr09-0478,tr07-0509,tr05-0379,tr03-1397,tr04-0887,tr05-1356,tr13-0549",
+    "--clean"
+  ],
+  "git": {
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
+  },
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.12.0",
+    "wonambi": "7.17"
+  },
+  "config": {
+    "manifest": "<root>/cache/manifest.csv",
+    "out": "<root>/results/detections_clean",
+    "datasets": "cinc2018",
+    "channels": null,
+    "recs": "tr12-0804,tr12-0440,tr04-0702,tr11-0734,tr13-0819,tr05-0910,tr05-0403,tr05-0028,tr08-0295,tr09-0049,tr05-0400,tr13-0226,tr05-0327,tr05-0418,tr06-0532,tr13-0387,tr05-0949,tr03-0921,tr07-0841,tr06-0282,tr03-0592,tr05-0744,tr05-0334,tr04-0269,tr12-0463,tr06-0862,tr03-1010,tr06-0694,tr05-0405,tr06-0084,tr11-0334,tr07-0394,tr10-0511,tr12-0682,tr10-0740,tr09-0423,tr05-0449,tr12-0503,tr03-0906,tr05-1042,tr03-0879,tr03-0713,tr12-0519,tr05-1687,tr09-0478,tr07-0509,tr05-0379,tr03-1397,tr04-0887,tr05-1356,tr13-0549",
+    "clean": true
+  }
+}

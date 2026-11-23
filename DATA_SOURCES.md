@@ -7,6 +7,10 @@ and keeps its own licence. This page gives:
 
 Licence readings for derived outputs are ours, not legal advice. Open questions are marked.
 
+`<data>` below is the raw-data folder: `datasets/` in the repository when that folder exists, else the
+repository folder itself, or `SPINDLEBENCH_DATA` when set (`src/spindlebench/paths.py`). The downloaders
+write there; every script reads raw files from there.
+
 | dataset | source | licence | download |
 |---|---|---|---|
 | DREAMS Spindles / K-complexes | [Zenodo 2650142](https://zenodo.org/records/2650142) (Devuyst et al., Univ. Mons TCTS / ULB–CHU Charleroi) | CC BY-NC-ND 3.0 Unported | manual: unzip into `<data>/DatabaseSpindles`, `<data>/DatabaseKcomplexes` |
@@ -16,6 +20,7 @@ Licence readings for derived outputs are ours, not legal advice. Open questions 
 | BOAS | [OpenNeuro ds005555](https://doi.org/10.18112/openneuro.ds005555.v1.1.3) | CC0 | `spindlebench download boas` |
 | HMC | [PhysioNet hmc-sleep-staging 1.1](https://doi.org/10.13026/t79q-fr32) | CC BY 4.0 | `spindlebench download hmc` |
 | Sleep-EDF Expanded | [PhysioNet sleep-edfx 1.0.0](https://physionet.org/content/sleep-edfx/1.0.0/) | Open Data Commons Attribution 1.0 | `spindlebench download sleepedf` |
+| CinC 2018 (training subset) | [PhysioNet challenge-2018 1.0.0](https://doi.org/10.13026/6phb-r450) | Open Data Commons Attribution 1.0 | `spindlebench download cinc2018` |
 
 ## Required citations
 
@@ -29,12 +34,14 @@ Licence readings for derived outputs are ours, not legal advice. Open questions 
 - **HMC:** Alvarez-Estevez D., Rijsman R. M. (2021), *PLoS ONE* 16(8): e0256111; the PhysioNet record
   doi:10.13026/t79q-fr32; Goldberger et al. (2000), PhysioNet.
 - **Sleep-EDF Expanded:** Kemp B. et al. (2000), *IEEE Trans Biomed Eng* 47(9), 1185–1194; Goldberger et al. (2000).
+- **CinC 2018:** Ghassemi M. M. et al. (2018), You Snooze, You Win: the PhysioNet/Computing in Cardiology
+  Challenge 2018, *Computing in Cardiology* 45; the PhysioNet record doi:10.13026/6phb-r450; Goldberger et al. (2000).
 
 ## What this repository shares
 
 | source | aggregate scores | detector outputs | expert-annotation tables | signals (incl. injected) |
 |---|---|---|---|---|
-| BOAS, HMC, Sleep-EDF | yes | yes | yes | SpindleInject frozen set, with attribution |
+| BOAS, HMC, Sleep-EDF, CinC 2018 | yes | yes | yes | SpindleInject frozen set, with attribution |
 | MASS SS2 annotations | yes | — | yes | no (signals restricted) |
 | NAP | yes | yes (BSD 3-Clause notice and citation kept) | once the licence scope is confirmed | recipe only until confirmed |
 | DREAMS | yes | **no**: rebuilt locally (and never `dreams_auto`, which is part of the database) | **no**: rebuilt locally from the user's own download | **no**: recipe only |

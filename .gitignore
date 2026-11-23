@@ -9,6 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
+# Raw datasets (licensed / large; spindlebench download ...): all in datasets/
+/datasets/
 # Data (licensed / large; fetch with download_nap.py)
 NapEEG/
 
@@ -50,11 +52,31 @@ third_party/
 MASS_data/
 papers/
 results/injection/bench/*/masks/
-HMC/
-SLEEPEDF/
+/HMC/
+/SLEEPEDF/
+/CINC2018/
 _snapshot/
 
 # private companion repository (its own git repo) and local Claude Code skills
 notes/
 .claude/
 skills-lock.json
+
+# student study: preprocessed signals and teacher masks (regenerable with experiments/student/prepare.py, rasterise.py)
+results/student/work/prep/
+results/student/work/teachers/
+experiments/student/.venv/
+cache_student_inj/
+cache_authors/
+results/student/work/fixtures/
+results/student/work/codes/
+results/student/work/runs/**/*.pt
+results/student/work/runs_collapsed_lam1/**/*.pt
+results/student/work/runs_superseded_guard1/**/*.pt
+results/student/work/arrays/
+results/student/injection/*/quiet/
+results/student/injection/teacher_matches.csv
+results/student/logs/*.out
+results/student/work/gold_p/
+results/student/work/arrays_inj/
+results/student/work/witness/

@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-17T13:10:05+00:00",
+  "command": [
+    "<root>/.venv/Scripts/python.exe",
+    "experiments/rq3_channels/authors_pipeline.py",
+    "build"
+  ],
+  "spindlebench": "0.1.0",
+  "git": {
+    "commit": "e0bc7816a79f27eda303860fb27bd0238451d35e",
+    "branch": "main",
+    "dirty": false
+  },
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.0",
+    "matplotlib": "3.11.2",
+    "affiliation": "1.0"
+  },
+  "uv_lock_sha256": "fae56252ca41381e55e998a603ba7ba0c41521392cbe907c9e06cf2db56c44bd",
+  "protocols": [],
+  "config": {
+    "args": [
+      "build"
+    ]
+  },
+  "seconds": 299.4
+}

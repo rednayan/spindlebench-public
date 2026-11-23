@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-03T11:28:15+00:00",
+  "command": [
+    "<root>/detectors/wonambi/.venv/Scripts/python.exe",
+    "detectors/wonambi/run.py",
+    "--datasets",
+    "nap",
+    "--recs",
+    "suj11_d1,suj12_d2,suj14_d2,suj16_d1,suj17_d2,suj19_d1,suj20_d2,suj22_d1,suj23_d2,suj26_d2,suj28_d1,suj29_d2",
+    "--clean"
+  ],
+  "git": {
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
+  },
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.12.0",
+    "wonambi": "7.17"
+  },
+  "config": {
+    "manifest": "<root>/cache/manifest.csv",
+    "out": "<root>/results/detections_clean",
+    "datasets": "nap",
+    "channels": null,
+    "recs": "suj11_d1,suj12_d2,suj14_d2,suj16_d1,suj17_d2,suj19_d1,suj20_d2,suj22_d1,suj23_d2,suj26_d2,suj28_d1,suj29_d2",
+    "clean": true
+  }
+}

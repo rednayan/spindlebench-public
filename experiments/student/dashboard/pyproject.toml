@@ -1,0 +1,9 @@
+[project]
+name = "student-dashboard"
+version = "0.0.0"
+description = "Live training dashboard for the student study (reads results/student; no torch)"
+requires-python = ">=3.12,<3.13"
+dependencies = ["streamlit", "plotly", "pandas", "numpy", "psutil"]
+
+[tool.uv]
+package = false

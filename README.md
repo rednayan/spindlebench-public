@@ -5,13 +5,17 @@ depends on the reference it is scored against.
 
 It runs rule-based and learned detectors on public sleep EEG under one scoring code, with every
 protocol choice explicit and versioned:
-- DREAMS, NAP, MASS SS2 annotations, BOAS, HMC and Sleep-EDF;
+- DREAMS, NAP, MASS SS2 annotations, BOAS, HMC, Sleep-EDF and a CinC 2018 subset;
 - matching rule, tolerance, reference annotator, sleep-stage scope;
 - point-mark scoring;
 - injected ground truth (SpindleInject).
 
 Status: research code for a Master's thesis (THWS, 2026–27) and a paper in preparation. The interfaces
 may still change; every change to a scoring protocol is logged in [`CHANGELOG.md`](CHANGELOG.md).
+
+New to the project? Open [`docs/visual_guide.html`](docs/visual_guide.html) in a browser for an illustrated
+walk-through, then [`ARCHITECTURE.md`](ARCHITECTURE.md) for precise diagrams of the whole pipeline, from the
+datasets through the benchmark to the label-free student.
 
 ## Install
 
@@ -37,12 +41,15 @@ uv run spindlebench download nap        # OSF chav7, ~18.5 GB
 uv run spindlebench download boas       # OpenNeuro ds005555 subset
 uv run spindlebench download hmc        # PhysioNet, checksums verified
 uv run spindlebench download sleepedf   # PhysioNet sleep-cassette, checksums verified
+uv run spindlebench download cinc2018  # PhysioNet CinC 2018, 250 nights aged 18-64 (--n), ~34 GB
 # DREAMS (Zenodo 2650142) and MASS (Borealis) require manual download; see DATA_SOURCES.md
 uv run spindlebench cache               # one standard format for every detector
+uv run spindlebench cache --only hmc,cinc2018   # add the label-free teacher corpora
 ```
 
-Locations default to the repository folder. Set `SPINDLEBENCH_DATA`, `SPINDLEBENCH_CACHE` or
-`SPINDLEBENCH_RESULTS` to put them elsewhere.
+Locations default to the repository folder; raw datasets go in `datasets/` when that folder exists
+(`datasets/NapEEG`, `datasets/HMC`, ...), else in the repository folder itself. Set `SPINDLEBENCH_DATA`,
+`SPINDLEBENCH_CACHE` or `SPINDLEBENCH_RESULTS` to put them elsewhere.
 
 ## Run
 

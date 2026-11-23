@@ -50,7 +50,12 @@ def test_no_scripts_left_at_the_top_level():
     assert not list(paths.ROOT.glob("*.py"))
 
 
+# shared helper modules imported by a study's scripts; they write no outputs themselves
+LIBRARIES = {"experiments/student/data.py", "experiments/student/validate.py"}
+
+
 @pytest.mark.parametrize("path", [p for p in SCRIPTS if p.relative_to(paths.ROOT).parts[0] == "experiments"
+                                  and p.relative_to(paths.ROOT).as_posix() not in LIBRARIES
                                   and re.search(r"^(from|import) spindlebench", p.read_text(encoding="utf-8"), re.M)],
                          ids=lambda p: str(p.relative_to(paths.ROOT)))
 def test_experiments_record_provenance(path):

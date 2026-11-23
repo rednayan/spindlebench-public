@@ -3,7 +3,7 @@ Where data, caches and results live. Every script gets its paths from here.
 
     SPINDLEBENCH_ROOT     repository root (default: the checkout containing this file or the working
                           directory; else the working directory itself)
-    SPINDLEBENCH_DATA     raw datasets (default: <root>)
+    SPINDLEBENCH_DATA     raw datasets (default: <root>/datasets if that folder exists, else <root>)
     SPINDLEBENCH_CACHE    standardised signal/label cache (default: <root>/cache)
     SPINDLEBENCH_RESULTS  results tree (default: <root>/results)
 Derived caches (injected copies, montage variant) sit next to the cache: <cache>/../cache_inj, ../cache_montage.
@@ -31,7 +31,7 @@ def _env(name, default):
 
 
 ROOT = _find_root()
-DATA = _env("SPINDLEBENCH_DATA", ROOT)
+DATA = _env("SPINDLEBENCH_DATA", ROOT / "datasets" if (ROOT / "datasets").is_dir() else ROOT)
 CACHE = _env("SPINDLEBENCH_CACHE", ROOT / "cache")
 RESULTS = _env("SPINDLEBENCH_RESULTS", ROOT / "results")
 CACHE_INJ = CACHE.parent / "cache_inj"
@@ -45,6 +45,7 @@ RAW = {
     "boas": DATA / "BOAS",
     "hmc": DATA / "HMC",
     "sleepedf": DATA / "SLEEPEDF",
+    "cinc2018": DATA / "CINC2018",
     "mass_ss2_annotations": DATA / "MASS_data" / "doi-10.5683-sp3-y889cs",
 }
 

@@ -1,17 +1,18 @@
 {
-  "created_utc": "2026-10-30T10:05:33+00:00",
+  "created_utc": "2026-11-03T11:28:06+00:00",
   "command": [
     "<root>/detectors/luna/.venv/Scripts/python.exe",
     "detectors/luna/run.py",
     "--datasets",
-    "dreams_spindles,nap",
-    "--channels",
-    "C3,F3,F4,C4,O1,O2,Cz"
+    "nap",
+    "--recs",
+    "suj11_d1,suj11_d2,suj12_d1,suj12_d2,suj13_d1,suj13_d2,suj14_d2,suj15_d1,suj15_d2,suj16_d1,suj16_d2,suj17_d1,suj17_d2,suj18_d1,suj18_d2,suj19_d1,suj19_d2,suj20_d1,suj20_d2,suj21_d1,suj21_d2,suj22_d1,suj22_d2,suj23_d1,suj23_d2,suj25_d2,suj26_d1,suj26_d2,suj27_d1,suj27_d2,suj28_d1,suj28_d2,suj29_d1,suj29_d2,suj32_d1,suj32_d2",
+    "--clean"
   ],
   "git": {
-    "commit": "90a60df8a1deaaf71488a3fbc315235455a35449",
-    "branch": "audit-baseline",
-    "dirty": false
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
   },
   "python": "3.12.13",
   "platform": "Windows-11-10.0.26200-SP0",
@@ -22,9 +23,10 @@
   },
   "config": {
     "manifest": "<root>/cache/manifest.csv",
-    "out": "<root>/results/detections",
-    "datasets": "dreams_spindles,nap",
-    "channels": "C3,F3,F4,C4,O1,O2,Cz",
-    "recs": null
+    "out": "<root>/results/detections_clean",
+    "datasets": "nap",
+    "channels": null,
+    "recs": "suj11_d1,suj11_d2,suj12_d1,suj12_d2,suj13_d1,suj13_d2,suj14_d2,suj15_d1,suj15_d2,suj16_d1,suj16_d2,suj17_d1,suj17_d2,suj18_d1,suj18_d2,suj19_d1,suj19_d2,suj20_d1,suj20_d2,suj21_d1,suj21_d2,suj22_d1,suj22_d2,suj23_d1,suj23_d2,suj25_d2,suj26_d1,suj26_d2,suj27_d1,suj27_d2,suj28_d1,suj28_d2,suj29_d1,suj29_d2,suj32_d1,suj32_d2",
+    "clean": true
   }
 }

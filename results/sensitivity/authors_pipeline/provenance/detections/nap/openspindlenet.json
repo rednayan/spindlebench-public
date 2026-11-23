@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-11-17T13:20:03+00:00",
+  "command": [
+    "<root>/detectors/openspindlenet/.venv/Scripts/python.exe",
+    "<root>/detectors/openspindlenet/run.py",
+    "--manifest",
+    "<root>/cache_authors/manifest.csv",
+    "--out",
+    "<root>/results/sensitivity/authors_pipeline/detections",
+    "--datasets",
+    "nap"
+  ],
+  "git": {
+    "commit": "e0bc7816a79f27eda303860fb27bd0238451d35e",
+    "branch": "main",
+    "dirty": false
+  },
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "3.1.0",
+    "onnxruntime": "1.31.0",
+    "openspindlenet": "0.1.1"
+  },
+  "config": {
+    "manifest": "<root>/cache_authors/manifest.csv",
+    "out": "<root>/results/sensitivity/authors_pipeline/detections",
+    "datasets": "nap",
+    "channels": null,
+    "recs": null,
+    "clean": false
+  }
+}

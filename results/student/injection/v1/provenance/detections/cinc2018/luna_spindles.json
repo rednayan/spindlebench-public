@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-04T08:29:49+00:00",
+  "command": [
+    "<root>/detectors/luna/.venv/Scripts/python.exe",
+    "detectors/luna/run.py",
+    "--manifest",
+    "cache_student_inj/v1/manifest.csv",
+    "--out",
+    "results/student/injection/v1/detections",
+    "--datasets",
+    "cinc2018",
+    "--recs",
+    "tr03-0394,tr03-0396,tr03-0764,tr03-1115,tr03-1155,tr04-0261,tr04-0570,tr04-0702,tr04-0806,tr05-0315,tr05-1163,tr05-1190,tr05-1197,tr05-1385,tr05-1572,tr06-0041,tr06-0262,tr06-0705,tr06-0880,tr07-0895,tr09-0051,tr10-0044,tr12-0493,tr13-0493,tr14-0272",
+    "--clean"
+  ],
+  "git": {
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
+  },
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "2.2.3",
+    "scipy": "1.18.1"
+  },
+  "config": {
+    "manifest": "cache_student_inj/v1/manifest.csv",
+    "out": "results/student/injection/v1/detections",
+    "datasets": "cinc2018",
+    "channels": null,
+    "recs": "tr03-0394,tr03-0396,tr03-0764,tr03-1115,tr03-1155,tr04-0261,tr04-0570,tr04-0702,tr04-0806,tr05-0315,tr05-1163,tr05-1190,tr05-1197,tr05-1385,tr05-1572,tr06-0041,tr06-0262,tr06-0705,tr06-0880,tr07-0895,tr09-0051,tr10-0044,tr12-0493,tr13-0493,tr14-0272",
+    "clean": true
+  }
+}

@@ -1,0 +1,13 @@
+dataset,a,b,tp,fp,fn,f1,kappa
+hmc,a7,luna_spindles,34940,46961,14719,0.5312,0.5339
+hmc,a7,wonambi_ucsd,51065,30836,71991,0.4983,0.5028
+hmc,a7,yasa_default,33727,48174,4242,0.5627,0.5261
+hmc,luna_spindles,wonambi_ucsd,44230,5429,78826,0.5122,0.5574
+hmc,luna_spindles,yasa_default,23749,25910,14220,0.542,0.4917
+hmc,wonambi_ucsd,yasa_default,27391,95665,10578,0.3402,0.3375
+cinc2018,a7,luna_spindles,55616,92558,20599,0.4957,0.5061
+cinc2018,a7,wonambi_ucsd,78211,69963,101650,0.4768,0.473
+cinc2018,a7,yasa_default,63249,84925,11762,0.5668,0.5406
+cinc2018,luna_spindles,wonambi_ucsd,64696,11519,115165,0.5053,0.5355
+cinc2018,luna_spindles,yasa_default,38700,37515,36311,0.5118,0.4625
+cinc2018,wonambi_ucsd,yasa_default,43411,136450,31600,0.3406,0.3235

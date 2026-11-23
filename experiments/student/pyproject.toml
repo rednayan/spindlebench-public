@@ -1,0 +1,40 @@
+[project]
+name = "spindlebench-student"
+version = "0.0.0"
+description = "Label-free student for sleep-spindle detection trained on detector consensus (notes/plans/student_architecture.md)"
+requires-python = ">=3.14"
+dependencies = [
+    "spindlebench",
+    "crowd-kit==1.4.2",            # Dawid-Skene (Apache-2.0)
+    "flyingsquid==0.0.0a0",        # triplet label model (Apache-2.0); unmaintained, see label_models.py
+    "pgmpy<0.1.13",                # FlyingSquid imports pgmpy.models.MarkovModel (removed in 0.1.13)
+    "scikit-learn",
+]
+# torch comes from one of two groups:
+#   cpu  (default) 2.15.0, the PyPI wheel (the CPU grid's runs)   uv sync
+#   cuda 2.14.1+cu126 (NVIDIA GPU; driver CUDA 12.6 or newer)       uv sync --no-group cpu --group cuda
+# 2.14.1 is the newest torch with a CUDA 12 wheel for Python 3.14 on Windows (2.15.0 ships CUDA 13 only, which
+# needs a driver for CUDA >= 13.2); the GPU machine's driver supports CUDA 12.9.
+# On the GPU machine pass the same flags to every `uv run` (or set UV_NO_GROUP=cpu and use --group cuda),
+# otherwise uv switches back to the CPU wheel.
+
+[tool.uv]
+package = false
+default-groups = ["dev", "cpu"]
+conflicts = [[{ group = "cpu" }, { group = "cuda" }]]
+
+[tool.uv.sources]
+spindlebench = { path = "../..", editable = true }
+torch = [{ index = "pytorch-cu126", group = "cuda" }]
+
+[[tool.uv.index]]
+name = "pytorch-cu126"
+url = "https://download.pytorch.org/whl/cu126"
+explicit = true
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+cpu = ["torch==2.15.0"]
+cuda = ["torch==2.14.1"]

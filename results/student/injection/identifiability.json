@@ -1,0 +1,20 @@
+{
+ "snr_from": 9.0,
+ "snr_from_ci_lower_bound": 12.0,
+ "mean_recall": {
+  "-3.0": 0.0136,
+  "0.0": 0.0357,
+  "3.0": 0.1104,
+  "6.0": 0.275,
+  "9.0": 0.5151,
+  "12.0": 0.7244
+ },
+ "variants": [
+  0,
+  1,
+  2,
+  3
+ ],
+ "events": 132588,
+ "note": "mean over the four teachers of P(y_r = 1 | y = 1) on injected spindles"
+}

@@ -34,7 +34,52 @@ def parse_args(default_datasets):
     p.add_argument("--datasets", default=",".join(default_datasets))
     p.add_argument("--channels", default=None, help="NAP channels, default C3")
     p.add_argument("--recs", default=None)
-    return p.parse_args()
+    p.add_argument("--clean", action="store_true",
+                   help="run on artefact-free windows only (cache/labels/<ds>/<rec>__artefact.csv, artefacts.v1); "
+                        "default output results/detections_clean")
+    a = p.parse_args()
+    if a.clean and a.out == str(RESULTS / "detections"):
+        a.out = str(RESULTS / "detections_clean")
+    return a
+
+
+# --clean: the detector sees the clean windows joined end to end (as Luna does with masked epochs);
+# its events are mapped back to recording time. Events that cross a join, or lie within JOIN_GUARD s
+# of one (filter transients at the step), are dropped.
+JOIN_GUARD = 1.0
+_CLEAN = {}
+
+
+def clean_view(row, data, sf):
+    """(data restricted to clean samples, original sample index of each kept sample)"""
+    a = pd.read_csv(CACHE / "labels" / row.dataset / f"{row.rec}__artefact.csv")
+    keep = np.ones(data.shape[1], bool)
+    for s, e in a.loc[a.artefact == 1, ["start", "end"]].to_numpy():
+        keep[int(round(s * sf)):int(round(e * sf))] = False
+    idx = np.flatnonzero(keep)
+    return data[:, idx], idx
+
+
+def to_recording_time(rows, idx, sf):
+    """map events from joined-clean time back to recording time; drop those at or near a join"""
+    if not len(idx):
+        return []
+    joins = np.flatnonzero(np.diff(idx) != 1) + 1  # first clean-sample index after each join
+    out = []
+    for r in rows:
+        i0 = int(round(r["onset"] * sf))
+        i1 = int(round((r["onset"] + r["duration"]) * sf))
+        i0, i1 = max(i0, 0), min(max(i1, i0), len(idx) - 1)
+        if len(joins):
+            g = int(JOIN_GUARD * sf)
+            k = np.searchsorted(joins, i0 - g)
+            if k < len(joins) and joins[k] <= i1 + g:
+                continue
+        o = dict(r)
+        o["onset"] = idx[i0] / sf
+        o["duration"] = (idx[i1] - idx[i0]) / sf
+        out.append(o)
+    return out
 
 
 def signal_path(path, manifest_path):
@@ -60,7 +105,14 @@ def iter_recordings(args):
             chans = args.channels.split(",") if args.channels else [row.default_channel]
         else:
             chans = [row.default_channel]
-        yield row, z["data"], float(z["sf"]), ch_names, chans
+        data, sf = z["data"], float(z["sf"])
+        if getattr(args, "clean", False):
+            # only the channels that will be run are kept (memory: CinC nights have six)
+            rows_ = [ch_names.index(c) for c in chans]
+            data, ch_names = data[rows_], [ch_names[i] for i in rows_]
+            data, idx = clean_view(row, data, sf)
+            _CLEAN[(row.dataset, row.rec)] = (idx, sf)
+        yield row, data, sf, ch_names, chans
 
 
 PACKAGES = ["numpy", "pandas", "scipy", "mne", "yasa", "torch", "onnxruntime", "wonambi", "sssm", "openspindlenet",
@@ -119,6 +171,9 @@ def write(args, row, detector, rows):
     if (row.dataset, detector) not in _recorded:
         _recorded.add((row.dataset, detector))
         write_provenance(args, row.dataset, detector)
+    if getattr(args, "clean", False):
+        idx, sf = _CLEAN[(row.dataset, row.rec)]
+        rows = to_recording_time(rows, idx, sf)
     d = Path(args.out) / row.dataset / detector
     d.mkdir(parents=True, exist_ok=True)
     df = pd.DataFrame(rows, columns=COLUMNS)

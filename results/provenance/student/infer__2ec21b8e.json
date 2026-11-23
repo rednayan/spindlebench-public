@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-11-16T11:47:55+00:00",
+  "command": [
+    "<root>/experiments/student/.venv/Scripts/python.exe",
+    "infer.py",
+    "--track",
+    "gpu",
+    "--runs",
+    "student_rules4_fixA_gpu_s0,student_rules4_fixA_gpu_s1,student_rules4_fixA_gpu_s2,student_rules4_fixA_gpu_s3,student_rules4_fixA_gpu_s4"
+  ],
+  "spindlebench": "0.1.0",
+  "git": {
+    "commit": "784ada7a7eb857841ae1312f6dab4a91fc1d3b31",
+    "branch": "main",
+    "dirty": false
+  },
+  "python": "3.14.10",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.1",
+    "matplotlib": "3.11.2",
+    "affiliation": "1.0",
+    "torch": "2.14.1+cu126"
+  },
+  "uv_lock_sha256": "fae56252ca41381e55e998a603ba7ba0c41521392cbe907c9e06cf2db56c44bd",
+  "protocols": [
+    "benchmark.v1",
+    "nap_points.v1",
+    "artefacts.v1"
+  ],
+  "config": {
+    "args": [
+      "--track",
+      "gpu",
+      "--runs",
+      "student_rules4_fixA_gpu_s0,student_rules4_fixA_gpu_s1,student_rules4_fixA_gpu_s2,student_rules4_fixA_gpu_s3,student_rules4_fixA_gpu_s4"
+    ]
+  },
+  "seconds": 94.7
+}

@@ -3,7 +3,7 @@ Download the Nap EEG dataset (Mei, Grossberg, Ng, Navarro & Ellmore, OSF project
 
     uv run spindlebench download nap [out_dir] [--annotations-only]   # -> <data>/NapEEG/
 
-Pulls two OSF components into out_dir (default NapEEG/):
+Pulls two OSF components into out_dir (default <data>/NapEEG/, <data> = datasets/; see paths.py):
   raw/          yb6ft  BrainVision .vhdr/.vmrk/.eeg, 64 ch, 1 kHz (~18.5 GB)
   annotations/  h68a3  "Manual Spindle Files" (manual spindles + stages)
 Resumable: files already on disk with the right size are skipped.

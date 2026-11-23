@@ -2,8 +2,10 @@
 
 One folder per study. Each script is run from anywhere with `uv run python experiments/<study>/<script>.py`,
 reads the cache (`uv run spindlebench cache`) and the stored detections (`results/detections/`, written by
-`detectors/<name>/run.py`), and writes to `results/`. Paths come from `spindlebench.paths`; set
-`SPINDLEBENCH_DATA`, `SPINDLEBENCH_CACHE` or `SPINDLEBENCH_RESULTS` to move them.
+`detectors/<name>/run.py`), and writes to `results/`. Paths come from `spindlebench.paths` (raw datasets
+in `datasets/`, see `DATA_SOURCES.md`); set `SPINDLEBENCH_DATA`, `SPINDLEBENCH_CACHE` or
+`SPINDLEBENCH_RESULTS` to move them. The student study keeps its training runs outside the repository,
+in `../runs/student/` (`SPINDLEBENCH_RUNS`; `experiments/student/README.md`).
 
 Run order inside a study is top to bottom. The table at the end of the main README maps thesis and paper
 items to the commands that produce them.

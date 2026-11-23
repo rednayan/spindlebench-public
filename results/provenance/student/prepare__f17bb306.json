@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-11-03T15:27:54+00:00",
+  "command": [
+    "<root>/experiments/student/.venv/Scripts/python.exe",
+    "prepare.py",
+    "--workers",
+    "10"
+  ],
+  "spindlebench": "0.1.0",
+  "git": {
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
+  },
+  "python": "3.14.7",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.1",
+    "matplotlib": "3.11.2",
+    "affiliation": "1.0",
+    "torch": "2.15.0"
+  },
+  "uv_lock_sha256": "fae56252ca41381e55e998a603ba7ba0c41521392cbe907c9e06cf2db56c44bd",
+  "protocols": [],
+  "config": {
+    "args": [
+      "--workers",
+      "10"
+    ]
+  },
+  "seconds": 56.9
+}

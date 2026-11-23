@@ -1,0 +1,33 @@
+{
+  "created_utc": "2026-11-03T12:28:13+00:00",
+  "command": [
+    "<root>/detectors/wonambi/.venv/Scripts/python.exe",
+    "detectors/wonambi/run.py",
+    "--datasets",
+    "hmc",
+    "--recs",
+    "SN032,SN038,SN042,SN046,SN050,SN054,SN058,SN062,SN067,SN071,SN075,SN079,SN083,SN087,SN091,SN095,SN099,SN103,SN107,SN111,SN115,SN119,SN123,SN127,SN131,SN136,SN140,SN144,SN148,SN152",
+    "--clean"
+  ],
+  "git": {
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
+  },
+  "python": "3.12.13",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.26.4",
+    "pandas": "2.2.3",
+    "scipy": "1.12.0",
+    "wonambi": "7.17"
+  },
+  "config": {
+    "manifest": "<root>/cache/manifest.csv",
+    "out": "<root>/results/detections_clean",
+    "datasets": "hmc",
+    "channels": null,
+    "recs": "SN032,SN038,SN042,SN046,SN050,SN054,SN058,SN062,SN067,SN071,SN075,SN079,SN083,SN087,SN091,SN095,SN099,SN103,SN107,SN111,SN115,SN119,SN123,SN127,SN131,SN136,SN140,SN144,SN148,SN152",
+    "clean": true
+  }
+}

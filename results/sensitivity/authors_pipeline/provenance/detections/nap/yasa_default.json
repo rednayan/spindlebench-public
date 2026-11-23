@@ -1,0 +1,35 @@
+{
+  "created_utc": "2026-11-17T13:10:11+00:00",
+  "command": [
+    "<root>/.venv/Scripts/python.exe",
+    "<root>/detectors/yasa/run.py",
+    "--manifest",
+    "<root>/cache_authors/manifest.csv",
+    "--out",
+    "<root>/results/sensitivity/authors_pipeline/detections",
+    "--datasets",
+    "nap"
+  ],
+  "git": {
+    "commit": "e0bc7816a79f27eda303860fb27bd0238451d35e",
+    "branch": "main",
+    "dirty": false
+  },
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.0"
+  },
+  "config": {
+    "manifest": "<root>/cache_authors/manifest.csv",
+    "out": "<root>/results/sensitivity/authors_pipeline/detections",
+    "datasets": "nap",
+    "channels": null,
+    "recs": null,
+    "clean": false
+  }
+}

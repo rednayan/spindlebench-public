@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-11-17T13:18:59+00:00",
+  "command": [
+    "<root>/detectors/sumo/.venv-sumo/Scripts/python.exe",
+    "<root>/detectors/sumo/run.py",
+    "--manifest",
+    "<root>/cache_authors/manifest.csv",
+    "--out",
+    "<root>/results/sensitivity/authors_pipeline/detections",
+    "--datasets",
+    "nap",
+    "--model",
+    "sumo"
+  ],
+  "git": {
+    "commit": "e0bc7816a79f27eda303860fb27bd0238451d35e",
+    "branch": "main",
+    "dirty": false
+  },
+  "python": "3.9.25",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "numpy": "1.19.5",
+    "pandas": "1.3.5",
+    "scipy": "1.6.3",
+    "torch": "1.10.0+cpu",
+    "pytorch-lightning": "1.5.4"
+  },
+  "config": {
+    "manifest": "<root>/cache_authors/manifest.csv",
+    "out": "<root>/results/sensitivity/authors_pipeline/detections",
+    "datasets": "nap",
+    "channels": null,
+    "recs": null,
+    "model": "sumo"
+  }
+}

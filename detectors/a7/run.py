@@ -53,12 +53,14 @@ if __name__ == "__main__":
         out = {k: [] for k in ("a7", "a7_incontext", "a7_n2base", "a7_incontext_n2base")}
         for ch in chans:
             x = preprocess(data[ch_names.index(ch)].astype(float), sf)
-            for tag, base in (("", None), ("_n2base", n2_mask(row.dataset, row.rec, len(x)))):
+            # --clean: the joined signal no longer lines up with the hypnogram, so no _n2base variants
+            variants = (("", None),) if args.clean else (("", None), ("_n2base", n2_mask(row.dataset, row.rec, len(x))))
+            for tag, base in variants:
                 events, _ = a7.a7_detect(x, base)
                 for s, e, ctx in events:
                     r = dict(onset=s / FS, duration=(e - s + 1) / FS, channel=ch, event="spindle", score=None)
                     out["a7" + tag].append(r)
                     if ctx:
                         out["a7_incontext" + tag].append(r)
-        n = {k: common.write(args, row, k, v) for k, v in out.items()}
+        n = {k: common.write(args, row, k, v) for k, v in out.items() if not (args.clean and "n2base" in k)}
         print(row.dataset, row.rec, n, f"{time.time() - t0:.1f}s", flush=True)

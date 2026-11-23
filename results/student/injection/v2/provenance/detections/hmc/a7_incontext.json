@@ -1,0 +1,38 @@
+{
+  "created_utc": "2026-11-04T09:00:06+00:00",
+  "command": [
+    "<root>/.venv/Scripts/python.exe",
+    "detectors/a7/run.py",
+    "--manifest",
+    "cache_student_inj/v2/manifest.csv",
+    "--out",
+    "results/student/injection/v2/detections",
+    "--datasets",
+    "hmc",
+    "--recs",
+    "SN004,SN009,SN040,SN045,SN063,SN069,SN072,SN077,SN078,SN087,SN089,SN095,SN102,SN133,SN141",
+    "--clean"
+  ],
+  "git": {
+    "commit": "0504f99beec3223f372dcdcd8eaaf52de94acceb",
+    "branch": "teacher-corpus",
+    "dirty": true
+  },
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "mne": "1.13.2",
+    "yasa": "0.8.0"
+  },
+  "config": {
+    "manifest": "cache_student_inj/v2/manifest.csv",
+    "out": "results/student/injection/v2/detections",
+    "datasets": "hmc",
+    "channels": null,
+    "recs": "SN004,SN009,SN040,SN045,SN063,SN069,SN072,SN077,SN078,SN087,SN089,SN095,SN102,SN133,SN141",
+    "clean": true
+  }
+}
