@@ -139,6 +139,6 @@ def pu_keep_mask(x_orig, Y, fs=100, sigma_mult=2.0, smooth_len=41):
     sig_p = band_pow(11.0, 16.0)
     alp_p = band_pow(8.0, 10.5)
     bet_p = band_pow(18.0, 30.0)
-    med = sig_p.median(dim=-1, keepdim=True).values.clamp_min(1e-8)
+    med = sig_p.sort(dim=-1).values[:, T // 2 : T // 2 + 1].clamp_min(1e-8)
     plausible_miss = (n_votes == 0) & (sig_p > sigma_mult * med) & (sig_p > alp_p) & (sig_p > bet_p)
     return ~((n_votes == 1) | plausible_miss)

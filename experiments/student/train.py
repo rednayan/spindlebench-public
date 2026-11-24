@@ -68,11 +68,14 @@ HEARTBEAT = 50             # batches between progress records (logging only; no 
 
 
 def heartbeat(out, **state):
-    """progress record for the dashboard: heartbeat.json (overwritten atomically)"""
+    """progress record for the dashboard: heartbeat.json (overwritten atomically; ignores transient Win locks)"""
     state["time"] = time.time()
     tmp = out / "heartbeat.json.tmp"
-    tmp.write_text(json.dumps(state, default=float))
-    tmp.replace(out / "heartbeat.json")
+    try:
+        tmp.write_text(json.dumps(state, default=float))
+        tmp.replace(out / "heartbeat.json")
+    except OSError:
+        pass
 
 
 def log_batches(out, row):
@@ -276,6 +279,8 @@ def main():
     ap.add_argument("--no-pu-mask", action="store_true", help="student_faint_pu: disable PU ignore mask")
     ap.add_argument("--wake-rem-frac", type=float, default=0.25,
                     help="student_faint_pu: fraction of batch from clean Wake/REM (y = 0)")
+    ap.add_argument("--surr-n2-frac", type=float, default=0.0,
+                    help="student_faint_pu: fraction of batch from phase-randomised N2 surrogates (hard N2 negs, y = 0)")
     ap.add_argument("--mc-witness", action="store_true",
                     help="student_faint_pu: use precomputed C4-M1 contralateral faint-spindle recovery & O2-M1 alpha veto")
     ap.add_argument("--no-borda-stop", action="store_true",
@@ -376,7 +381,8 @@ def main():
             tb = time.time()
             if faint_pu:
                 n_wr = int(round(tr["batch"] * a.wake_rem_frac)) if wr_sampler is not None else 0
-                n_n2 = tr["batch"] - n_wr
+                n_surr = int(round(tr["batch"] * a.surr_n2_frac)) if a.surr_n2_frac > 0 else 0
+                n_n2 = tr["batch"] - n_wr - n_surr
                 if a.mc_witness:
                     xb_n2, cb_n2, nights_n2, mc_n2 = sampler.batch_with_nights(rng, n_n2, return_mc=True)
                 else:
@@ -388,8 +394,14 @@ def main():
                     xb_n2, _ = data.mix_faint(xb_n2, qx, rng, prob=a.faint_mix,
                                               alpha_lo=a.faint_alpha_lo, alpha_hi=a.faint_alpha_hi)
                 xb_n2 = data.augment(xb_n2, rng)
-                xb_wr = data.augment(wr_sampler.batch(rng, n_wr), rng) if n_wr > 0 else None
-                loss, parts = step_loss_faint_pu(net, a, xb_n2, xb_orig, cb_n2, xb_wr, tables, device, mc_n2=mc_n2)
+                neg_parts = []
+                if n_wr > 0:
+                    neg_parts.append(data.augment(wr_sampler.batch(rng, n_wr), rng))
+                if n_surr > 0:
+                    xs_raw, _ = sampler.batch(rng, n_surr)
+                    neg_parts.append(data.augment(data.phase_randomize_batch(xs_raw, rng), rng))
+                xb_neg = np.concatenate(neg_parts, axis=0) if neg_parts else None
+                loss, parts = step_loss_faint_pu(net, a, xb_n2, xb_orig, cb_n2, xb_neg, tables, device, mc_n2=mc_n2)
             else:
                 xb, cb = sampler.batch(rng, tr["batch"])
                 xb = data.augment(xb, rng)

@@ -341,6 +341,18 @@ def mix_faint(x, quiet_x, rng, prob=0.5, alpha_lo=0.45, alpha_hi=0.75):
     return out, mask
 
 
+def phase_randomize_batch(x, rng):
+    """Batch FFT phase-randomised surrogates of 1-D crops [K, T]: exact same power spectrum (incl. N2
+    sigma power and slow waves) with zero coherent transient bursts (hard within-N2 negatives, y = 0)."""
+    n = x.shape[-1]
+    X = np.fft.rfft(np.asarray(x, dtype=np.float64), axis=-1)
+    hi = X.shape[-1] - 1 if n % 2 == 0 else X.shape[-1]
+    if hi > 1:
+        phi = rng.uniform(0.0, 2.0 * np.pi, size=(len(x), hi - 1))
+        X[:, 1:hi] *= np.exp(1j * phi)
+    return np.fft.irfft(X, n=n, axis=-1).astype(np.float32)
+
+
 class WakeRemSampler:
     """40-s clean Wake or REM crops (certain background, y = 0) from the training nights."""
 
